@@ -2,6 +2,7 @@ package testing;
 
 public class TODO {
     /*
-        MAKE EXPRESSION AND STATEMENT CLASSES IN MODEL!
+        MAKE STATEMENT CLASSES IN MODEL!
+        LOOK BACK INTO data_structures!
     */
 }

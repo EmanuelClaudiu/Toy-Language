@@ -1,10 +1,14 @@
-package model;
+package model.values;
 
-public class BoolValue implements Value{
+import model.types.BoolType;
+import model.types.Type;
+import model.values.Value;
+
+public class BoolValue implements Value {
 
     public boolean value;
 
-    BoolValue(boolean v) {
+    public BoolValue(boolean v) {
         value = v;
     }
 

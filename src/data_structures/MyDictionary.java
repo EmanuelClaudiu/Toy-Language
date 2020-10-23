@@ -1,10 +1,15 @@
 package data_structures;
+import model.values.Value;
 
-public class MyDictionary<Key, Value> implements DictionaryInterface{
+import java.util.*;
+
+public class MyDictionary<K, V> implements DictionaryInterface{
+
+    public Dictionary<String, Value> dictionary;
 
     @Override
-    public Object getValue(Object _key) {
-        return null;
+    public Value lookup(Object _key) {
+        return (Value) dictionary.get(_key);
     }
 
 }

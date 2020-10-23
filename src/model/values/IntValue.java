@@ -1,10 +1,14 @@
-package model;
+package model.values;
 
-public class IntValue implements Value{
+import model.types.IntType;
+import model.types.Type;
+import model.values.Value;
+
+public class IntValue implements Value {
 
     public int value;
 
-    IntValue(int v) {
+    public IntValue(int v) {
         value = v;
     }
 

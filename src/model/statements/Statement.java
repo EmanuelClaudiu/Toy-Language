@@ -1,4 +1,4 @@
-package model;
+package model.statements;
 
 public interface Statement {
     

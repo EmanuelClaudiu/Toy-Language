@@ -1,7 +1,8 @@
 package data_structures;
+import model.values.*;
 
-public interface DictionaryInterface<Key, Value> {
+public interface DictionaryInterface<K, V> {
 
-    public Value getValue(Key _key);
+    public Value lookup(K _key);
 
 }
