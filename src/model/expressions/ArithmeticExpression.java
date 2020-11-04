@@ -9,12 +9,39 @@ public class ArithmeticExpression implements Expression{
 
     public Expression e1;
     public Expression e2;
-    public int operator; // 1-plus, 2-minus, 3-star, 4-divide
+    public int operator; // 1-plus, 2-minus, 3-multiplication, 4-divide
 
-    public ArithmeticExpression(Expression _e1, Expression _e2, int _operator){
+    public ArithmeticExpression(int _operator, Expression _e1, Expression _e2){
         e1 = _e1;
         e2 = _e2;
-        operator = _operator;
+        if(_operator == 42){ // *
+            operator = 3;
+        }
+        if(_operator == 43){ // +
+            operator = 1;
+        }
+        if(_operator == 45){ // -
+            operator = 2;
+        }
+        if(_operator == 47){ // /
+            operator = 4;
+        }
+    }
+
+    public String toString(){
+        if(operator == 3){ // *
+            return e1.toString() + "*" + e2.toString();
+        }
+        if(operator == 1){ // +
+            return e1.toString() + "+" + e2.toString();
+        }
+        if(operator == 2){ // -
+            return e1.toString() + "-" + e2.toString();
+        }
+        if(operator == 4){ // /
+            return e1.toString() + "/" + e2.toString();
+        }
+        return "null";
     }
 
     @Override
@@ -34,16 +61,16 @@ public class ArithmeticExpression implements Expression{
                 if(operator == 2) return new IntValue(n1 - n2); // substraction
                 if(operator == 3) return new IntValue(n1 * n2); // multiplication
                 if(operator == 4){
-                    if(n2 == 0) throw new MyException("division by zero");
+                    if(n2 == 0) throw new MyException("Arithmetic Expression Exception: division by zero not allowed");
                     return new IntValue(n1 / n2);
                 }
                 else {
-                    throw new MyException("second operand is not an integer");
+                    throw new MyException("Arithmetic Expression Exception: second operand is not an integer");
                 }
             }
         }
         else {
-            throw new MyException("first operand is not integer");
+            throw new MyException("Arithmetic Expression Exception: first operand is not integer");
         }
 
         return new IntValue(-1); // should never reach this point

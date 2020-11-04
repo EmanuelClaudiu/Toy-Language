@@ -9,5 +9,7 @@ public interface ArrayInterface<T> {
     public T valueAt(int _position); // value at _position
     public void remove(); // removes from tail
     public void removeFromPosition(int _position); // removes from position
+    public void clear();
+    public String toString();
 
 }

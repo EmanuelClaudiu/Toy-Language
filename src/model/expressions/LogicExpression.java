@@ -19,6 +19,16 @@ public class LogicExpression implements Expression{
         operator = _operator;
     }
 
+    public String toString(){
+        if(operator == 1){
+            return e1.toString() + "&&" + e2.toString();
+        }
+        if(operator == 2){
+            return e1.toString() + "||" + e2.toString();
+        }
+        return "null"; //should never reach here
+    }
+
     @Override
     public Value evaluate(DictionaryInterface<String, Value> table) throws MyException {
         Value v1, v2;
@@ -36,11 +46,11 @@ public class LogicExpression implements Expression{
                 if(operator == 2) return new BoolValue(n1 || n2); // or
             }
             else{
-                throw new MyException("second operand is not boolean");
+                throw new MyException("Logic Expression Exception: second operand is not boolean");
             }
         }
         else {
-            throw new MyException("first operand is not boolean");
+            throw new MyException("Logic Expression Exception: first operand is not boolean");
         }
 
         return new BoolValue(true); // should never reach this point

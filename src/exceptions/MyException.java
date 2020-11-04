@@ -6,10 +6,11 @@ public class MyException extends Exception {
 
     public MyException(String _message){
         this.message = _message;
+        speak();
     }
 
-    public String getMessage(){
-        return this.message;
+    public void speak(){
+        System.out.println("\033[0;31m" + message);
     }
 
 }

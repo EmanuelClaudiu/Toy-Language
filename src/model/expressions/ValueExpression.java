@@ -12,9 +12,13 @@ public class ValueExpression implements Expression{
         e = _e;
     }
 
+    public String toString(){
+        return e.toString();
+    }
+
     @Override
     public Value evaluate(DictionaryInterface<String, Value> table) throws MyException {
-        return null;
+        return e;
     }
 
 }

@@ -30,4 +30,14 @@ public class MyArray<T> implements ArrayInterface{
         myList.remove(_position);
     }
 
+    @Override
+    public void clear() {
+        myList.clear();
+    }
+
+    @Override
+    public String toString() {
+        return myList.toString();
+    }
+
 }

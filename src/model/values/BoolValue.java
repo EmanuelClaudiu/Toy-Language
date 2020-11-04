@@ -12,6 +12,10 @@ public class BoolValue implements Value {
         value = v;
     }
 
+    public BoolValue() {
+
+    }
+
     public boolean getValue(){
         return value;
     }

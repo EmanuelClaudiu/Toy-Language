@@ -12,6 +12,10 @@ public class VariableExpression implements Expression{
         id = _id;
     }
 
+    public String toString(){
+        return id.toString();
+    }
+
     @Override
     public Value evaluate(DictionaryInterface<String, Value> table) throws MyException {
         return table.lookup(id);

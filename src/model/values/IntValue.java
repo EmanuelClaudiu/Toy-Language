@@ -12,6 +12,10 @@ public class IntValue implements Value {
         value = v;
     }
 
+    public IntValue() {
+
+    }
+
     public int getValue(){
         return value;
     }

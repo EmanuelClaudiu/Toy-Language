@@ -10,9 +10,9 @@ public class ProgramState {
     public ArrayInterface<Value> output;
     //public Statement originalProgram;
 
-    ProgramState(StackInterface<Statement> _stack,
-                 DictionaryInterface<String, Value> _symbols,
-                 ArrayInterface<Value> _output/*, Statement _program*/){
+    public ProgramState(StackInterface<Statement> _stack,
+                        DictionaryInterface<String, Value> _symbols,
+                        ArrayInterface<Value> _output/*, Statement _program*/){
         executionStack = _stack;
         symbolsTable = _symbols;
         output = _output;
@@ -31,6 +31,10 @@ public class ProgramState {
 
     public ArrayInterface<Value> getOutput(){
         return this.output;
+    }
+
+    public String toString() {
+        return executionStack.toString() + "\n" + symbolsTable.toString() + "\n" + output.toString() + "\n";
     }
 
 }

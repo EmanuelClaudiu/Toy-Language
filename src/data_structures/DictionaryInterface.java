@@ -3,6 +3,11 @@ import model.values.*;
 
 public interface DictionaryInterface<K, V> {
 
-    public Value lookup(K _key);
+    public void add(K _key, V _value);
+    public V lookup(K _key);
+    public boolean isDefined(K _key);
+    public void update(K _key, V _value);
+    public void clear();
+    public String toString();
 
 }

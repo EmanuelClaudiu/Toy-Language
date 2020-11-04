@@ -3,16 +3,31 @@ import java.util.*;
 
 public class MyStack<T> implements StackInterface {
 
-    Stack<T> myStack = new Stack<T>();
+    public Stack<T> myStack = new Stack<T>();
 
     @Override
     public T pop() {
-        return myStack.pop();
+        return (T) myStack.pop();
     }
 
     @Override
     public void push(Object _object) {
         myStack.push((T) _object);
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return myStack.isEmpty();
+    }
+
+    @Override
+    public void clear() {
+        myStack.clear();
+    }
+
+    @Override
+    public String toString() {
+        return myStack.toString();
     }
 
 }
