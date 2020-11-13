@@ -11,5 +11,6 @@ public interface ArrayInterface<T> {
     public void removeFromPosition(int _position); // removes from position
     public void clear();
     public String toString();
+    public String toFileString();
 
 }

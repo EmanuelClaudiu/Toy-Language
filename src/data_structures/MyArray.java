@@ -40,4 +40,9 @@ public class MyArray<T> implements ArrayInterface{
         return myList.toString();
     }
 
+    @Override
+    public String toFileString() {
+        return null;
+    }
+
 }

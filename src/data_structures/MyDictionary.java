@@ -37,4 +37,9 @@ public class MyDictionary<K, V> implements DictionaryInterface{
         return dictionary.toString();
     }
 
+    @Override
+    public String toFileString() {
+        return null;
+    }
+
 }

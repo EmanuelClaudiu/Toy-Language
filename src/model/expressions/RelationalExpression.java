@@ -1,0 +1,86 @@
+package model.expressions;
+
+import data_structures.DictionaryInterface;
+import exceptions.MyException;
+import model.types.IntType;
+import model.values.BoolValue;
+import model.values.IntValue;
+import model.values.Value;
+
+public class RelationalExpression implements Expression{
+
+    public Expression e1;
+    public Expression e2;
+    public String operator;
+
+    public RelationalExpression(String _operator, Expression _e1, Expression _e2){
+        e1 = _e1;
+        e2 = _e2;
+        operator = _operator;
+    }
+
+    public String toString(){
+        return e1.toString() + operator + e2.toString();
+    }
+
+    @Override
+    public Value evaluate(DictionaryInterface<String, Value> symbolsTable) throws MyException {
+        Value v1, v2;
+        v1 = e1.evaluate(symbolsTable);
+        //checks if v1 and v2 are integers
+        if(v1.getType().equals(new IntType())){
+            v2 = e2.evaluate(symbolsTable);
+            if(v2.getType().equals(new IntType())){
+                IntValue i1 = (IntValue) v1;
+                IntValue i2 = (IntValue) v2;
+                int n1, n2;
+                n1 = i1.getValue();
+                n2 = i2.getValue();
+                if(operator == "<"){
+                    if(n1 < n2)
+                        return new BoolValue(true);
+                    else
+                        return new BoolValue(false);
+                }
+                if(operator == "<="){
+                    if(n1 <= n2)
+                        return new BoolValue(true);
+                    else
+                        return new BoolValue(false);
+                }
+                if(operator == "=="){
+                    if(n1 == n2)
+                        return new BoolValue(true);
+                    else
+                        return new BoolValue(false);
+                }
+                if(operator == "!="){
+                    if(n1 != n2)
+                        return new BoolValue(true);
+                    else
+                        return new BoolValue(false);
+                }
+                if(operator == ">"){
+                    if(n1 > n2)
+                        return new BoolValue(true);
+                    else
+                        return new BoolValue(false);
+                }
+                if(operator == ">="){
+                    if(n1 >= n2)
+                        return new BoolValue(true);
+                    else
+                        return new BoolValue(false);
+                }
+            }
+            else{
+                throw new MyException("Relational Expression Exception: second operand is not an integer");
+            }
+        }
+        else{
+            throw new MyException("Relational Expression Exception: first operand is not an integer");
+        }
+        return new BoolValue(false); //should never reach here
+    }
+
+}

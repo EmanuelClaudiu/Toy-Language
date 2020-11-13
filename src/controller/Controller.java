@@ -18,6 +18,11 @@ public class Controller {
         public ProgramState getCurrentProgramState() {
             return null;
         }
+
+        @Override
+        public void logProgramState() {
+
+        }
     };
 
     public Controller(Repository _repo){
@@ -36,9 +41,11 @@ public class Controller {
     public void allStep() throws MyException {
         ProgramState program = repo.getCurrentProgramState();
         System.out.println(program); // printing the curent program
+        // log it in the file
         while(!program.getExecutionStack().isEmpty()){
             program = oneStep(program);
             System.out.println(program);
+            repo.logProgramState();
         }
     }
 

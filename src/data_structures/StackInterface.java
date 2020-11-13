@@ -7,5 +7,6 @@ public interface StackInterface<T> {
     public boolean isEmpty();
     public void clear();
     public String toString();
+    public String toFileString();
 
 }

@@ -41,7 +41,7 @@ public class ArithmeticExpression implements Expression{
         if(operator == 4){ // /
             return e1.toString() + "/" + e2.toString();
         }
-        return "null";
+        return "null"; //should never reach here
     }
 
     @Override

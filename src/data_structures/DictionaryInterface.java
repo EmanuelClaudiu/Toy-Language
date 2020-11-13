@@ -9,5 +9,6 @@ public interface DictionaryInterface<K, V> {
     public void update(K _key, V _value);
     public void clear();
     public String toString();
+    public String toFileString();
 
 }
