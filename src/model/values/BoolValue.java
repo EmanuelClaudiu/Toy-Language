@@ -16,6 +16,16 @@ public class BoolValue implements Value {
 
     }
 
+    @Override
+    public boolean equals(Object another){
+        if(value == ((BoolValue) another).getValue()){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
     public boolean getValue(){
         return value;
     }

@@ -2,7 +2,6 @@ package testing;
 
 public class TODO {
     /*
-        implement controller
-        LOOK BACK INTO data_structures!
+        implement the FileTable data structure
     */
 }

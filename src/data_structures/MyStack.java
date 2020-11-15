@@ -34,9 +34,7 @@ public class MyStack<T> implements StackInterface {
         String stackString = "";
         for (int i = myStack.size() - 1; i >= 0; i--){
             stackString += myStack.elementAt(i);
-            if(i != 0){
-                stackString += "\n";
-            }
+            stackString += "\n";
         }
         return stackString;
     }

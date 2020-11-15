@@ -42,7 +42,11 @@ public class MyArray<T> implements ArrayInterface{
 
     @Override
     public String toFileString() {
-        return null;
+        String arrayString = "";
+        for(T element : myList){
+            arrayString += (element.toString() + "\n");
+        }
+        return arrayString;
     }
 
 }

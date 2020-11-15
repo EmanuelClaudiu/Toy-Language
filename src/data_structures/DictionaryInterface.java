@@ -7,6 +7,7 @@ public interface DictionaryInterface<K, V> {
     public V lookup(K _key);
     public boolean isDefined(K _key);
     public void update(K _key, V _value);
+    public void remove(K _key);
     public void clear();
     public String toString();
     public String toFileString();

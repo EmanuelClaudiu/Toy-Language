@@ -26,12 +26,21 @@ public class MemoryRepository implements Repository{
     }
 
     @Override
-    public void logProgramState() throws MyException {
+    public void logProgramStateExec() throws MyException {
         try{
             PrintWriter logFile = new PrintWriter(new BufferedWriter(new FileWriter(logFilePath, true)));
             String stackString = currentProgramState.getExecutionStack().toFileString();
+            String dictionaryString = currentProgramState.getSymbolsTable().toFileString();
+            String arrayString = currentProgramState.getOutput().toFileString();
+            String fileTableString = currentProgramState.getFileTable().toFileString();
             logFile.println("Execution Stack:");
             logFile.println(stackString);
+            logFile.println("Symbols Table:");
+            logFile.println(dictionaryString);
+            logFile.println("Output:");
+            logFile.println(arrayString);
+            logFile.println("File Table:");
+            logFile.println(fileTableString);
             logFile.println("--------------------");
             logFile.flush();
             logFile.close();

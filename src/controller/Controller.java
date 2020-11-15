@@ -11,6 +11,8 @@ import model.types.IntType;
 import repository.MemoryRepository;
 import repository.Repository;
 
+import java.io.IOException;
+
 public class Controller {
 
     public Repository repo = new Repository() {
@@ -20,7 +22,7 @@ public class Controller {
         }
 
         @Override
-        public void logProgramState() {
+        public void logProgramStateExec() {
 
         }
     };
@@ -40,12 +42,12 @@ public class Controller {
 
     public void allStep() throws MyException {
         ProgramState program = repo.getCurrentProgramState();
-        System.out.println(program); // printing the curent program
+        System.out.println(program); // printing the current program
         // log it in the file
         while(!program.getExecutionStack().isEmpty()){
             program = oneStep(program);
             System.out.println(program);
-            repo.logProgramState();
+            repo.logProgramStateExec();
         }
     }
 

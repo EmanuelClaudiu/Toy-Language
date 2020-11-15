@@ -1,9 +1,8 @@
 package data_structures;
-import model.values.Value;
 
-import java.util.*;
+import java.util.HashMap;
 
-public class MyDictionary<K, V> implements DictionaryInterface{
+public class FileTable<K, V> implements DictionaryInterface{
 
     public HashMap<K, V> dictionary = new HashMap<K, V>();
 
@@ -13,7 +12,7 @@ public class MyDictionary<K, V> implements DictionaryInterface{
     }
 
     @Override
-    public V lookup(Object _key) {
+    public Object lookup(Object _key) {
         return (V) dictionary.get(_key);
     }
 
@@ -27,8 +26,7 @@ public class MyDictionary<K, V> implements DictionaryInterface{
         dictionary.replace((K) _key,(V) _value);
     }
 
-    @Override
-    public void remove(Object _key) {
+    public void remove(Object _key){
         dictionary.remove((K) _key);
     }
 
@@ -37,8 +35,7 @@ public class MyDictionary<K, V> implements DictionaryInterface{
         dictionary.clear();
     }
 
-    @Override
-    public String toString() {
+    public String toString(){
         return dictionary.toString();
     }
 
@@ -46,7 +43,7 @@ public class MyDictionary<K, V> implements DictionaryInterface{
     public String toFileString() {
         String dictionaryString = "";
         for(K key : dictionary.keySet()){
-            dictionaryString += (key.toString() + " --> " + dictionary.get(key).toString() + "\n");
+            dictionaryString += ( key.toString() + "\n");
         }
         return dictionaryString;
     }

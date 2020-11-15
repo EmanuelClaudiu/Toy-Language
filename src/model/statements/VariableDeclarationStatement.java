@@ -6,6 +6,7 @@ import exceptions.MyException;
 import model.ProgramState;
 import model.types.BoolType;
 import model.types.IntType;
+import model.types.StringType;
 import model.types.Type;
 import model.values.BoolValue;
 import model.values.IntValue;
@@ -31,15 +32,22 @@ public class VariableDeclarationStatement implements Statement{
     public ProgramState execute(ProgramState _state) throws MyException {
         DictionaryInterface<String, Value> symbolsTable = _state.getSymbolsTable();
         if(type instanceof IntType) {
-            symbolsTable.add(name, new IntValue());
+            symbolsTable.add(name, new IntType().defaultValue());
         }
         else{
             if(type instanceof BoolType){
-                symbolsTable.add(name, new BoolValue());
+                symbolsTable.add(name, new BoolType().defaultValue());
             }
-            else
-                throw new MyException("Variable Declaration Exception: unknown type for declaration of \'" + name + "\'");
+            else {
+                if(type instanceof StringType){
+                    symbolsTable.add(name, new StringType().defaultValue());
+                }
+                else{
+                    throw new MyException("Variable Declaration Exception: unknown type for declaration of \'" + name + "\'");
+                }
+            }
         }
+
         return _state;
     }
 

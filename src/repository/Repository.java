@@ -6,6 +6,6 @@ import model.ProgramState;
 public interface Repository{
 
     public ProgramState getCurrentProgramState();
-    public void logProgramState() throws MyException;
+    public void logProgramStateExec() throws MyException;
 
 }
