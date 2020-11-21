@@ -39,7 +39,13 @@ public class ReadFile implements Statement {
                     try {
                         BufferedReader br = (BufferedReader) fileTable.lookup(val);
                         String line = br.readLine();
-                        IntValue integer = new IntValue(Integer.parseInt(line));
+                        IntValue integer;
+                        try{
+                            integer = new IntValue(Integer.parseInt(line));
+                        }
+                        catch(Exception e){
+                            throw new MyException("ReadFile Statement Exception: Element read from the file is not a number");
+                        }
                         symbolsTable.update(variableName, integer);
                     }
                     catch (IOException e){

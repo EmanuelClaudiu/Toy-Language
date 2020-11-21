@@ -29,6 +29,7 @@ public class Interpretter {
     public String code2 = "int a;int b;a=2+3*5;b=a+1;Print(b)";
     public String code3 = "bool a;int v;a=true;(If a Then v=2 Else v=3);Print(v)";
     public String code4 = "string v;v=\"file.txt\";openRFile(v);int c;readFile(v,c);readFile(v,c);closeRFile(v);";
+    public String code5 = "int a;int v;a=5;(If a <= v Then Print(\"a is greater\") Else Print(\"v is greater\"));Print(\"Done\")";
 
     public void flushLogFile(String logFilePath) throws IOException {
         PrintWriter logFile = new PrintWriter(new BufferedWriter(new FileWriter(logFilePath)));
@@ -172,12 +173,84 @@ public class Interpretter {
         Repository repo4 = new MemoryRepository(programState4, "out4.txt");
         Controller controller4 = new Controller(repo4);
 
+        // example 5
+        Statement ex5 = new CompoundStatement
+                (
+                        new VariableDeclarationStatement("a",new IntType()),
+                        new CompoundStatement
+                                (
+                                        new VariableDeclarationStatement("v", new IntType()),
+                                        new CompoundStatement
+                                                (
+                                                        new AssignStatement("a", new ValueExpression(new IntValue(5))),
+                                                        new CompoundStatement
+                                                                (
+                                                                        new IfStatement
+                                                                                (
+                                                                                        new RelationalExpression(">=", new VariableExpression("a"), new VariableExpression("v")),
+                                                                                        new PrintStatement(new ValueExpression(new StringValue("a is greater"))),
+                                                                                        new PrintStatement(new ValueExpression(new StringValue("v is greater")))
+                                                                                ),
+                                                                        new PrintStatement(new ValueExpression(new StringValue("Done")))
+                                                                )
+                                                )
+                                )
+                );
+        MyStack<Statement> executionStack5 = new MyStack<Statement>();
+        MyDictionary<String, Value> symbolsTable5 = new MyDictionary<String, Value>();
+        MyArray<Value> output5 = new MyArray<Value>();
+        FileTable<StringValue, BufferedReader> fileTable5 = new FileTable<StringValue, BufferedReader>();
+        executionStack5.clear();
+        executionStack5.push(ex5);
+        symbolsTable5.clear();
+        output5.clear();
+        ProgramState programState5 = new ProgramState(executionStack5, symbolsTable5, output5, fileTable5);
+        Repository repo5 = new MemoryRepository(programState5, "out5.txt");
+        Controller controller5 = new Controller(repo5);
+
+        // example 6 FLAWED
+        Statement ex6 = new CompoundStatement
+                (
+                        new VariableDeclarationStatement("a",new IntType()),
+                        new CompoundStatement
+                                (
+                                        new VariableDeclarationStatement("v", new StringType()),
+                                        new CompoundStatement
+                                                (
+                                                        new AssignStatement("a", new ValueExpression(new IntValue(5))),
+                                                        new CompoundStatement
+                                                                (
+                                                                        new IfStatement
+                                                                                (
+                                                                                        new RelationalExpression(">=", new VariableExpression("a"), new VariableExpression("v")),
+                                                                                        new PrintStatement(new ValueExpression(new StringValue("a is greater"))),
+                                                                                        new PrintStatement(new ValueExpression(new StringValue("v is greater")))
+                                                                                ),
+                                                                        new PrintStatement(new ValueExpression(new StringValue("Done")))
+                                                                )
+                                                )
+                                )
+                );
+        MyStack<Statement> executionStack6 = new MyStack<Statement>();
+        MyDictionary<String, Value> symbolsTable6 = new MyDictionary<String, Value>();
+        MyArray<Value> output6 = new MyArray<Value>();
+        FileTable<StringValue, BufferedReader> fileTable6 = new FileTable<StringValue, BufferedReader>();
+        executionStack6.clear();
+        executionStack6.push(ex6);
+        symbolsTable6.clear();
+        output6.clear();
+        ProgramState programState6 = new ProgramState(executionStack6, symbolsTable6, output6, fileTable6);
+        Repository repo6 = new MemoryRepository(programState6, "out5.txt");
+        Controller controller6 = new Controller(repo6);
+
         TextMenu menu = new TextMenu();
         menu.addCommand(new ExitCommand("0", "exit"));
         menu.addCommand((new RunExample("1", ex1.toString(), controller1)));
         menu.addCommand((new RunExample("2", ex2.toString(), controller2)));
         menu.addCommand((new RunExample("3", ex3.toString(), controller3)));
         menu.addCommand((new RunExample("4", ex4.toString(), controller4)));
+        menu.addCommand((new RunExample("5", ex5.toString(), controller5)));
+        menu.addCommand((new RunExample("6", ex6.toString() + " <- FLAWED", controller6)));
         menu.show();
 
     }
