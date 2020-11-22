@@ -11,7 +11,7 @@ public class NopStatement implements Statement{
 
     @Override
     public ProgramState execute(ProgramState _state) throws MyException {
-        return null;
+        return _state;
     }
 
 }

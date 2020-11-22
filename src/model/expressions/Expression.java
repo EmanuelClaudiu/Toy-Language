@@ -1,5 +1,6 @@
 package model.expressions;
 import data_structures.DictionaryInterface;
+import data_structures.Heap;
 import exceptions.MyException;
 import model.values.Value;
 

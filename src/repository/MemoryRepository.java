@@ -33,6 +33,7 @@ public class MemoryRepository implements Repository{
             String dictionaryString = currentProgramState.getSymbolsTable().toFileString();
             String arrayString = currentProgramState.getOutput().toFileString();
             String fileTableString = currentProgramState.getFileTable().toFileString();
+            String heapString = currentProgramState.getHeap().toFileString();
             logFile.println("Execution Stack:");
             logFile.println(stackString);
             logFile.println("Symbols Table:");
@@ -41,6 +42,8 @@ public class MemoryRepository implements Repository{
             logFile.println(arrayString);
             logFile.println("File Table:");
             logFile.println(fileTableString);
+            logFile.println("Heap:");
+            logFile.println(heapString);
             logFile.println("--------------------");
             logFile.flush();
             logFile.close();

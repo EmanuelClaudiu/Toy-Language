@@ -13,16 +13,19 @@ public class ProgramState {
     public DictionaryInterface<String, Value> symbolsTable;
     public ArrayInterface<Value> output;
     public FileTable<StringValue, BufferedReader> fileTable;
+    public Heap<Integer, Value> heap;
     //public Statement originalProgram;
 
     public ProgramState(StackInterface<Statement> _stack,
                         DictionaryInterface<String, Value> _symbols,
                         ArrayInterface<Value> _output,
-                        FileTable<StringValue, BufferedReader> _fileTable/*, Statement _program*/){
+                        FileTable<StringValue, BufferedReader> _fileTable,
+                        Heap<Integer, Value> _heap/*, Statement _program*/){
         executionStack = _stack;
         symbolsTable = _symbols;
         output = _output;
         fileTable = _fileTable;
+        heap = _heap;
         //originalProgram = _program;   // deepCopy?
     }
 
@@ -44,8 +47,12 @@ public class ProgramState {
         return this.fileTable;
     }
 
+    public Heap<Integer, Value> getHeap(){
+        return this.heap;
+    }
+
     public String toString() {
-        return executionStack.toString() + "\n" + symbolsTable.toString() + "\n" + output.toString() + "\n";
+        return "Execution Stack: " + executionStack.toString() + "\n" + "Symbols Table: " + symbolsTable.toString() + "\n" + "File Table: " + fileTable.toString() + "\n" + "Heap: " + heap.toString() + "\n" + "Output: " + output.toString() + "\n";
     }
 
 }

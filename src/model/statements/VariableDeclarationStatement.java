@@ -4,10 +4,7 @@ import data_structures.DictionaryInterface;
 import data_structures.StackInterface;
 import exceptions.MyException;
 import model.ProgramState;
-import model.types.BoolType;
-import model.types.IntType;
-import model.types.StringType;
-import model.types.Type;
+import model.types.*;
 import model.values.BoolValue;
 import model.values.IntValue;
 import model.values.Value;
@@ -43,7 +40,12 @@ public class VariableDeclarationStatement implements Statement{
                     symbolsTable.add(name, new StringType().defaultValue());
                 }
                 else{
-                    throw new MyException("Variable Declaration Exception: unknown type for declaration of \'" + name + "\'");
+                    if(type instanceof RefType){
+                        symbolsTable.add(name, new RefType(( (RefType) type).getInner()).defaultValue());
+                    }
+                    else {
+                        throw new MyException("Variable Declaration Exception: unknown type for declaration of \'" + name + "\'");
+                    }
                 }
             }
         }
