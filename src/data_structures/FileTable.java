@@ -1,6 +1,7 @@
 package data_structures;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class FileTable<K, V> implements DictionaryInterface{
 
@@ -46,6 +47,16 @@ public class FileTable<K, V> implements DictionaryInterface{
             dictionaryString += ( key.toString() + "\n");
         }
         return dictionaryString;
+    }
+
+    @Override
+    public HashMap getContent() {
+        return dictionary;
+    }
+
+    @Override
+    public void setContent(Map _newMap) {
+        dictionary = (HashMap<K,V>) _newMap;
     }
 
 }

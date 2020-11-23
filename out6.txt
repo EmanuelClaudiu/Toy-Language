@@ -1,0 +1,260 @@
+Execution Stack:
+v=Ref(int)
+new(v,20);print(rH(v));wH(v,30);print(rH(v))
+
+Symbols Table:
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Execution Stack:
+new(v,20);print(rH(v));wH(v,30);print(rH(v))
+
+Symbols Table:
+v --> (0,int)
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Execution Stack:
+new(v,20)
+print(rH(v));wH(v,30);print(rH(v))
+
+Symbols Table:
+v --> (0,int)
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Execution Stack:
+print(rH(v));wH(v,30);print(rH(v))
+
+Symbols Table:
+v --> (1,int)
+
+Output:
+
+File Table:
+
+Heap:
+1 --> 20
+
+--------------------
+Execution Stack:
+print(rH(v))
+wH(v,30);print(rH(v))
+
+Symbols Table:
+v --> (1,int)
+
+Output:
+
+File Table:
+
+Heap:
+1 --> 20
+
+--------------------
+Execution Stack:
+wH(v,30);print(rH(v))
+
+Symbols Table:
+v --> (1,int)
+
+Output:
+20
+
+File Table:
+
+Heap:
+1 --> 20
+
+--------------------
+Execution Stack:
+wH(v,30)
+print(rH(v))
+
+Symbols Table:
+v --> (1,int)
+
+Output:
+20
+
+File Table:
+
+Heap:
+1 --> 20
+
+--------------------
+Execution Stack:
+print(rH(v))
+
+Symbols Table:
+v --> (1,int)
+
+Output:
+20
+
+File Table:
+
+Heap:
+1 --> 30
+
+--------------------
+Execution Stack:
+
+Symbols Table:
+v --> (1,int)
+
+Output:
+20
+30
+
+File Table:
+
+Heap:
+1 --> 30
+
+--------------------
+Execution Stack:
+v=Ref(int)
+new(v,20);print(rH(v));wH(v,30);print(rH(v))
+
+Symbols Table:
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Execution Stack:
+new(v,20);print(rH(v));wH(v,30);print(rH(v))
+
+Symbols Table:
+v --> (0,int)
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Execution Stack:
+new(v,20)
+print(rH(v));wH(v,30);print(rH(v))
+
+Symbols Table:
+v --> (0,int)
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Execution Stack:
+print(rH(v));wH(v,30);print(rH(v))
+
+Symbols Table:
+v --> (1,int)
+
+Output:
+
+File Table:
+
+Heap:
+1 --> 20
+
+--------------------
+Execution Stack:
+print(rH(v))
+wH(v,30);print(rH(v))
+
+Symbols Table:
+v --> (1,int)
+
+Output:
+
+File Table:
+
+Heap:
+1 --> 20
+
+--------------------
+Execution Stack:
+wH(v,30);print(rH(v))
+
+Symbols Table:
+v --> (1,int)
+
+Output:
+20
+
+File Table:
+
+Heap:
+1 --> 20
+
+--------------------
+Execution Stack:
+wH(v,30)
+print(rH(v))
+
+Symbols Table:
+v --> (1,int)
+
+Output:
+20
+
+File Table:
+
+Heap:
+1 --> 20
+
+--------------------
+Execution Stack:
+print(rH(v))
+
+Symbols Table:
+v --> (1,int)
+
+Output:
+20
+
+File Table:
+
+Heap:
+1 --> 30
+
+--------------------
+Execution Stack:
+
+Symbols Table:
+v --> (1,int)
+
+Output:
+20
+30
+
+File Table:
+
+Heap:
+1 --> 30
+
+--------------------

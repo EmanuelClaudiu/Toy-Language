@@ -49,4 +49,14 @@ public class MyArray<T> implements ArrayInterface{
         return arrayString;
     }
 
+    @Override
+    public ArrayList<T> getContent() {
+        return myList;
+    }
+
+    @Override
+    public void setContent(List _newArray) {
+        myList = (ArrayList<T>) _newArray;
+    }
+
 }

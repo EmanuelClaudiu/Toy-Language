@@ -51,4 +51,14 @@ public class MyDictionary<K, V> implements DictionaryInterface{
         return dictionaryString;
     }
 
+    @Override
+    public HashMap getContent() {
+        return dictionary;
+    }
+
+    @Override
+    public void setContent(Map _newMap) {
+        dictionary = (HashMap<K, V>) _newMap;
+    }
+
 }

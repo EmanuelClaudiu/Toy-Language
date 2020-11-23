@@ -1,6 +1,7 @@
 package data_structures;
 import model.*;
 import java.util.ArrayList;
+import java.util.List;
 
 public interface ArrayInterface<T> {
 
@@ -12,5 +13,8 @@ public interface ArrayInterface<T> {
     public void clear();
     public String toString();
     public String toFileString();
+
+    public ArrayList<T> getContent();
+    public void setContent(List _newArray);
 
 }
