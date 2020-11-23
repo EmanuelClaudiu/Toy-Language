@@ -2,6 +2,7 @@ package model.statements;
 
 import data_structures.DictionaryInterface;
 import data_structures.FileTable;
+import data_structures.Heap;
 import exceptions.MyException;
 import model.ProgramState;
 import model.expressions.Expression;
@@ -32,8 +33,10 @@ public class ReadFile implements Statement {
     public ProgramState execute(ProgramState _state) throws MyException {
         FileTable<StringValue, BufferedReader> fileTable = _state.getFileTable();
         DictionaryInterface<String, Value> symbolsTable = _state.getSymbolsTable();
+        Heap<Integer, Value> heap = _state.getHeap();
+
         if(symbolsTable.isDefined(variableName)){
-            Value val = expression.evaluate(symbolsTable);
+            Value val = expression.evaluate(symbolsTable, heap);
             if(val.getType().equals(new StringType())){
                 if(fileTable.isDefined(val)) {
                     try {

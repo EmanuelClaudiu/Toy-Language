@@ -1,6 +1,7 @@
 package model.expressions;
 
 import data_structures.DictionaryInterface;
+import data_structures.Heap;
 import exceptions.MyException;
 import model.types.*;
 import model.values.*;
@@ -45,12 +46,12 @@ public class ArithmeticExpression implements Expression{
     }
 
     @Override
-    public Value evaluate(DictionaryInterface<String, Value> symbolsTable) throws MyException{
+    public Value evaluate(DictionaryInterface<String, Value> symbolsTable, Heap <Integer, Value> heap) throws MyException{
         Value v1, v2;
-        v1 = e1.evaluate(symbolsTable);
+        v1 = e1.evaluate(symbolsTable, heap);
         // checks if v1 and v2 are integers
         if(v1.getType().equals(new IntType())){
-            v2 = e2.evaluate(symbolsTable);
+            v2 = e2.evaluate(symbolsTable, heap);
             if(v2.getType().equals(new IntType())){
                 IntValue i1 = (IntValue) v1;
                 IntValue i2 = (IntValue) v2;

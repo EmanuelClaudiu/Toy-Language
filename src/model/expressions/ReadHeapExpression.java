@@ -1,6 +1,7 @@
 package model.expressions;
 
 import data_structures.DictionaryInterface;
+import data_structures.Heap;
 import exceptions.MyException;
 import model.values.RefValue;
 import model.values.Value;
@@ -14,8 +15,8 @@ public class ReadHeapExpression implements Expression {
     }
 
     @Override
-    public Value evaluate(DictionaryInterface<String, Value> table) throws MyException {
-        Value e = expression.evaluate(table);
+    public Value evaluate(DictionaryInterface<String, Value> table, Heap<Integer, Value> heap) throws MyException {
+        Value e = expression.evaluate(table, heap);
         if(e instanceof RefValue){
 
         }

@@ -1,6 +1,7 @@
 package model.statements;
 
 import data_structures.DictionaryInterface;
+import data_structures.Heap;
 import exceptions.MyException;
 import model.ProgramState;
 import model.expressions.Expression;
@@ -26,7 +27,9 @@ public class IfStatement implements Statement{
     @Override
     public ProgramState execute(ProgramState _state) throws MyException {
         DictionaryInterface<String, Value> symbolsTable = _state.getSymbolsTable();
-        Value val = expression.evaluate(symbolsTable);
+        Heap<Integer, Value> heap = _state.getHeap();
+
+        Value val = expression.evaluate(symbolsTable, heap);
         if(val.toString() == "true"){
             thenS.execute(_state);
         }

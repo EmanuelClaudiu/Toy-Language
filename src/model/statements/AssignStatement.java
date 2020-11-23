@@ -1,6 +1,7 @@
 package model.statements;
 
 import data_structures.DictionaryInterface;
+import data_structures.Heap;
 import data_structures.StackInterface;
 import exceptions.MyException;
 import model.ProgramState;
@@ -26,9 +27,10 @@ public class AssignStatement implements Statement{
     public ProgramState execute(ProgramState _state) throws MyException {
         StackInterface<Statement> stack = _state.getExecutionStack();
         DictionaryInterface<String, Value> symbolsTable = _state.getSymbolsTable();
+        Heap<Integer, Value> heap = _state.getHeap();
 
         if(symbolsTable.isDefined(id)){
-            Value val = expression.evaluate(symbolsTable);
+            Value val = expression.evaluate(symbolsTable, heap);
             Type typeId = (symbolsTable.lookup(id)).getType();
             if(val.getType().equals(typeId)){
                 symbolsTable.update(id, val);

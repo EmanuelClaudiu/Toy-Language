@@ -1,6 +1,7 @@
 package model.statements;
 
 import data_structures.ArrayInterface;
+import data_structures.Heap;
 import exceptions.MyException;
 import model.ProgramState;
 import model.expressions.Expression;
@@ -23,7 +24,8 @@ public class PrintStatement  implements Statement{
     @Override
     public ProgramState execute(ProgramState _state) throws MyException {
         ArrayInterface<Value> output = _state.getOutput();
-        output.add(expression.evaluate(_state.getSymbolsTable()));
+
+        output.add(expression.evaluate(_state.getSymbolsTable(), _state.getHeap()));
         return _state;
     }
 }

@@ -27,9 +27,10 @@ public class NewStatement implements Statement{
     public ProgramState execute(ProgramState _state) throws MyException {
         DictionaryInterface<String, Value> symbolsTable = _state.getSymbolsTable();
         Heap<Integer, Value> heap = _state.getHeap();
+
         if(symbolsTable.isDefined(pointerName)){
             if(symbolsTable.lookup(pointerName).getType() instanceof RefType){
-                Value expressionValue = expresion.evaluate(symbolsTable);
+                Value expressionValue = expresion.evaluate(symbolsTable, heap);
                 Value pointerValue = symbolsTable.lookup(pointerName);
                 if(expressionValue.getType().equals( ((RefValue) pointerValue).getLocationType())){
                     Integer newEntryAddress = heap.addNewEntry(expressionValue);

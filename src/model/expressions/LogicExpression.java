@@ -1,6 +1,7 @@
 package model.expressions;
 
 import data_structures.DictionaryInterface;
+import data_structures.Heap;
 import exceptions.MyException;
 import model.types.*;
 import model.values.BoolValue;
@@ -30,12 +31,12 @@ public class LogicExpression implements Expression{
     }
 
     @Override
-    public Value evaluate(DictionaryInterface<String, Value> table) throws MyException {
+    public Value evaluate(DictionaryInterface<String, Value> table, Heap<Integer, Value> heap) throws MyException {
         Value v1, v2;
-        v1 = e1.evaluate(table);
+        v1 = e1.evaluate(table, heap);
         //checks if v1 and v2 are booleans
         if(v1.getType().equals(new BoolType())){
-            v2 = e2.evaluate(table);
+            v2 = e2.evaluate(table, heap);
             if(v2.getType().equals(new BoolType())){
                 BoolValue i1 = (BoolValue) v1;
                 BoolValue i2 = (BoolValue) v2;
