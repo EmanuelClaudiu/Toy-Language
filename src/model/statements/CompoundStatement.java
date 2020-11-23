@@ -15,7 +15,7 @@ public class CompoundStatement implements Statement{
     }
 
     public String toString(){
-        return "(" + first.toString() + ";" + second.toString() + ")";
+        return  first.toString() + ";" + second.toString();
     }
 
     @Override

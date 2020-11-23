@@ -17,7 +17,7 @@ public class RefValue implements Value {
         return "(" + address.toString() + "," + locationType.toString() + ")";
     }
 
-    public int getAddress(){
+    public Integer getAddress(){
         return address;
     }
 

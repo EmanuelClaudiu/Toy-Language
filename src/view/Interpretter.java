@@ -3,10 +3,7 @@ package view;
 import controller.Controller;
 import data_structures.*;
 import model.ProgramState;
-import model.expressions.ArithmeticExpression;
-import model.expressions.RelationalExpression;
-import model.expressions.ValueExpression;
-import model.expressions.VariableExpression;
+import model.expressions.*;
 import model.statements.*;
 import model.types.BoolType;
 import model.types.IntType;
@@ -222,7 +219,13 @@ public class Interpretter {
                         new VariableDeclarationStatement("v",new RefType(new IntType())),
                         new CompoundStatement(
                                 new NewStatement("v", new ValueExpression(new IntValue(20))),
-                                new PrintStatement(new VariableExpression("v"))
+                                new CompoundStatement(
+                                        new PrintStatement(new ReadHeapExpression(new VariableExpression("v"))),
+                                        new CompoundStatement(
+                                                new WriteHeapStatement("v", new ValueExpression(new IntValue(30))),
+                                                new PrintStatement(new ReadHeapExpression(new VariableExpression("v")))
+                                        )
+                                )
                         )
                 );
 
