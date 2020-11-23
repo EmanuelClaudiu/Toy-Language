@@ -39,4 +39,14 @@ public class MyStack<T> implements StackInterface {
         return stackString;
     }
 
+    @Override
+    public Stack getContent() {
+        return myStack;
+    }
+
+    @Override
+    public void setContent(Stack _newStack) {
+        myStack = (Stack<T>) _newStack;
+    }
+
 }

@@ -243,6 +243,37 @@ public class Interpretter {
         Repository repo6 = new MemoryRepository(programState6, "out6.txt");
         Controller controller6 = new Controller(repo6);
 
+        Statement ex7 = new CompoundStatement(
+                new VariableDeclarationStatement("v", new IntType()),
+                new CompoundStatement(
+                        new AssignStatement("v", new ValueExpression(new IntValue(4))),
+                        new CompoundStatement(
+                                new WhileStatement(
+                                        new RelationalExpression(">", new VariableExpression("v"), new ValueExpression(new IntValue(0))),
+                                        new CompoundStatement(
+                                                new PrintStatement(new VariableExpression("v")),
+                                                new AssignStatement("v", new ArithmeticExpression('-', new VariableExpression("v"), new ValueExpression(new IntValue(1))))
+                                        )
+                                ),
+                                new PrintStatement(new ValueExpression(new IntValue(100)))
+                        )
+                )
+        );
+
+        MyStack<Statement> executionStack7 = new MyStack<Statement>();
+        MyDictionary<String, Value> symbolsTable7 = new MyDictionary<String, Value>();
+        MyArray<Value> output7 = new MyArray<Value>();
+        FileTable<StringValue, BufferedReader> fileTable7 = new FileTable<StringValue, BufferedReader>();
+        Heap<Integer, Value> heap7 = new Heap<Integer, Value>();
+        executionStack7.clear();
+        executionStack7.push(ex7);
+        symbolsTable7.clear();
+        output7.clear();
+        heap7.clear();
+        ProgramState programState7 = new ProgramState(executionStack7, symbolsTable7, output7, fileTable7, heap7);
+        Repository repo7 = new MemoryRepository(programState7, "out7.txt");
+        Controller controller7 = new Controller(repo7);
+
         TextMenu menu = new TextMenu();
         menu.addCommand(new ExitCommand("0", "exit"));
         menu.addCommand((new RunExample("1", ex1.toString(), controller1)));
@@ -251,6 +282,7 @@ public class Interpretter {
         menu.addCommand((new RunExample("4", ex4.toString(), controller4)));
         menu.addCommand((new RunExample("5", ex5.toString(), controller5)));
         menu.addCommand((new RunExample("6", ex6.toString() + " <- REF", controller6)));
+        menu.addCommand((new RunExample("7", ex7.toString() + " <- WHILE", controller7)));
         menu.show();
 
     }
