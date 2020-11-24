@@ -274,6 +274,39 @@ public class Interpretter {
         Repository repo7 = new MemoryRepository(programState7, "out7.txt");
         Controller controller7 = new Controller(repo7);
 
+        // example 8 Garbage Collector
+        Statement ex8 = new CompoundStatement
+                (
+                        new VariableDeclarationStatement("v",new RefType(new IntType())),
+                        new CompoundStatement(
+                                new NewStatement("v", new ValueExpression(new IntValue(20))),
+                                new CompoundStatement(
+                                        new VariableDeclarationStatement("a", new RefType(new RefType(new IntType()))),
+                                        new CompoundStatement(
+                                                new NewStatement("a", new VariableExpression("v")),
+                                                new CompoundStatement(
+                                                        new NewStatement("v", new ValueExpression(new IntValue(30))),
+                                                        new PrintStatement(new ReadHeapExpression(new ReadHeapExpression(new VariableExpression("a"))))
+                                                )
+                                        )
+                                )
+                        )
+                );
+
+        MyStack<Statement> executionStack8 = new MyStack<Statement>();
+        MyDictionary<String, Value> symbolsTable8 = new MyDictionary<String, Value>();
+        MyArray<Value> output8 = new MyArray<Value>();
+        FileTable<StringValue, BufferedReader> fileTable8 = new FileTable<StringValue, BufferedReader>();
+        Heap<Integer, Value> heap8 = new Heap<Integer, Value>();
+        executionStack8.clear();
+        executionStack8.push(ex8);
+        symbolsTable8.clear();
+        output8.clear();
+        heap8.clear();
+        ProgramState programState8 = new ProgramState(executionStack8, symbolsTable8, output8, fileTable8, heap8);
+        Repository repo8 = new MemoryRepository(programState8, "out8.txt");
+        Controller controller8 = new Controller(repo8);
+
         TextMenu menu = new TextMenu();
         menu.addCommand(new ExitCommand("0", "exit"));
         menu.addCommand((new RunExample("1", ex1.toString(), controller1)));
@@ -283,6 +316,7 @@ public class Interpretter {
         menu.addCommand((new RunExample("5", ex5.toString(), controller5)));
         menu.addCommand((new RunExample("6", ex6.toString() + " <- REF", controller6)));
         menu.addCommand((new RunExample("7", ex7.toString() + " <- WHILE", controller7)));
+        menu.addCommand((new RunExample("8", ex8.toString() + " <- Garbage Collector", controller8)));
         menu.show();
 
     }
