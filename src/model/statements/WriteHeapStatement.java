@@ -52,7 +52,7 @@ public class WriteHeapStatement implements Statement{
             throw new MyException("Write Heap Statement Exception: Variable of Ref Type is not defined in the symbols table.");
         }
 
-        return _state;
+        return null;
     }
 
 }

@@ -67,7 +67,7 @@ public class ReadFile implements Statement {
             throw new MyException("ReadFile Statement Exception: Variable not previously defined.");
         }
 
-        return _state;
+        return null;
     }
 
 }

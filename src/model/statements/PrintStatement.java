@@ -26,6 +26,6 @@ public class PrintStatement  implements Statement{
         ArrayInterface<Value> output = _state.getOutput();
 
         output.add(expression.evaluate(_state.getSymbolsTable(), _state.getHeap()));
-        return _state;
+        return null;
     }
 }

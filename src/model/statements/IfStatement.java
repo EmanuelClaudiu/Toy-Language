@@ -41,7 +41,7 @@ public class IfStatement implements Statement{
                 throw new MyException("If Statement Exception: failed to evaluate 'if' statement");
             }
         }
-        return _state;
+        return null;
     }
 
 }

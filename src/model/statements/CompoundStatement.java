@@ -23,7 +23,7 @@ public class CompoundStatement implements Statement{
         StackInterface<Statement> stack = _state.getExecutionStack();
         stack.push(second);
         stack.push(first);
-        return _state;
+        return null;
     }
 
 }

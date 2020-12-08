@@ -2,6 +2,7 @@ package data_structures;
 import model.values.Value;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class MyDictionary<K, V> implements DictionaryInterface{
 
@@ -59,6 +60,16 @@ public class MyDictionary<K, V> implements DictionaryInterface{
     @Override
     public void setContent(Map _newMap) {
         dictionary = (HashMap<K, V>) _newMap;
+    }
+
+    public MyDictionary<K, V> clone(){
+        MyDictionary<K, V> clone = new MyDictionary<K, V>();
+
+        for(Map.Entry mapElement : dictionary.entrySet()){
+            clone.add((K) mapElement.getKey(), (V) mapElement.getValue() );
+        }
+
+        return clone;
     }
 
 }

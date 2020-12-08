@@ -48,7 +48,7 @@ public class NewStatement implements Statement{
             throw new MyException("New Statement Exception: Variable name \'" + pointerName + "\' has not been previously defined in the symbols table.");
         }
 
-        return _state;
+        return null;
     }
 
 }

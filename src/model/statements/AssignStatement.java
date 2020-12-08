@@ -42,7 +42,7 @@ public class AssignStatement implements Statement{
         else{
             throw new MyException("Assignment Statement Exception: the used variable" + id + " was not declared before");
         }
-        return _state;
+        return null;
     }
 
 }

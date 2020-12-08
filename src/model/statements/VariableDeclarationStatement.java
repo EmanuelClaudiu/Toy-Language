@@ -50,7 +50,7 @@ public class VariableDeclarationStatement implements Statement{
             }
         }
 
-        return _state;
+        return null;
     }
 
 }

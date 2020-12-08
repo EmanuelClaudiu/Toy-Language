@@ -51,7 +51,7 @@ public class OpenRFile implements Statement{
             throw new MyException("OpenRFile Statement Exception: Expression result is not a String Type.");
         }
 
-        return _state;
+        return null;
     }
 
 }

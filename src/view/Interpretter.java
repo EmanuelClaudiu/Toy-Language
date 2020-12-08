@@ -2,6 +2,7 @@ package view;
 
 import controller.Controller;
 import data_structures.*;
+import exceptions.MyException;
 import model.ProgramState;
 import model.expressions.*;
 import model.statements.*;
@@ -307,6 +308,65 @@ public class Interpretter {
         Repository repo8 = new MemoryRepository(programState8, "out8.txt");
         Controller controller8 = new Controller(repo8);
 
+        // example 9 Fork
+        Statement ex9 = new CompoundStatement
+                (
+                        new VariableDeclarationStatement("v", new IntType()),
+                        new CompoundStatement(
+                                new VariableDeclarationStatement("a", new RefType(new IntType())),
+                                new CompoundStatement(
+                                        new AssignStatement("v", new ValueExpression(new IntValue(10))),
+                                        new CompoundStatement(
+                                                new NewStatement("a", new ValueExpression(new IntValue(22))),
+                                                new CompoundStatement(
+                                                        new ForkStatement(
+                                                                new CompoundStatement(
+                                                                        new WriteHeapStatement("a", new ValueExpression(new IntValue(30))),
+                                                                        new CompoundStatement(
+                                                                                new AssignStatement("v", new ValueExpression(new IntValue(32))),
+                                                                                new CompoundStatement(
+                                                                                        new PrintStatement(new VariableExpression("v")),
+                                                                                        new PrintStatement(new ReadHeapExpression(new VariableExpression("a")))
+                                                                                )
+                                                                        )
+                                                                )
+                                                        ),
+                                                        new CompoundStatement(
+                                                                new PrintStatement(new VariableExpression("v")),
+                                                                new PrintStatement(new ReadHeapExpression(new VariableExpression("a")))
+                                                        )
+                                                )
+                                        )
+                                )
+                        )
+                );
+
+        MyStack<Statement> executionStack9 = new MyStack<Statement>();
+        MyDictionary<String, Value> symbolsTable9 = new MyDictionary<String, Value>();
+        MyArray<Value> output9 = new MyArray<Value>();
+        FileTable<StringValue, BufferedReader> fileTable9 = new FileTable<StringValue, BufferedReader>();
+        Heap<Integer, Value> heap9 = new Heap<Integer, Value>();
+        executionStack9.clear();
+        executionStack9.push(ex9);
+        symbolsTable9.clear();
+        output9.clear();
+        heap9.clear();
+        ProgramState programState9 = new ProgramState(executionStack9, symbolsTable9, output9, fileTable9, heap9);
+        Repository repo9 = new MemoryRepository(programState9, "out9.txt");
+        Controller controller9 = new Controller(repo9);
+
+        //setting up the file for kkeping the thread Id order ----------
+        PrintWriter threadOrderFile = null;
+        try {
+            threadOrderFile = new PrintWriter(new BufferedWriter(new FileWriter("ThreadOrderID.txt")));
+            threadOrderFile.println("2");
+            threadOrderFile.close();
+        } catch (IOException e) {
+            System.out.println("Interpreter exception: Could not open file ThreadOrderID.txt");
+        }
+        //---------------------------------------------------------------
+
+
         TextMenu menu = new TextMenu();
         menu.addCommand(new ExitCommand("0", "exit"));
         menu.addCommand((new RunExample("1", ex1.toString(), controller1)));
@@ -317,6 +377,7 @@ public class Interpretter {
         menu.addCommand((new RunExample("6", ex6.toString() + " <- REF", controller6)));
         menu.addCommand((new RunExample("7", ex7.toString() + " <- WHILE", controller7)));
         menu.addCommand((new RunExample("8", ex8.toString() + " <- Garbage Collector", controller8)));
+        menu.addCommand((new RunExample("9", ex9.toString() + " <- Fork", controller9)));
         menu.show();
 
     }

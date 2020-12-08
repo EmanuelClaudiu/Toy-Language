@@ -51,7 +51,7 @@ public class CloseRFile implements Statement{
             throw new MyException("CloseRFile Statement Exception: Expression result is not a String Type.");
         }
 
-        return _state;
+        return null;
     }
 
 }

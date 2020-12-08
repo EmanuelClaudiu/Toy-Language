@@ -40,7 +40,7 @@ public class WhileStatement implements Statement{
             throw new MyException("While Statement Exception: Conditional expression is not a boolean type.");
         }
 
-        return _state;
+        return null;
     }
 
 }
