@@ -3,14 +3,11 @@ package controller;
 import data_structures.*;
 import exceptions.MyException;
 import model.ProgramState;
-import model.statements.Statement;
 import model.types.RefType;
 import model.values.RefValue;
 import model.values.Value;
-import repository.MemoryRepository;
 import repository.Repository;
 
-import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Callable;

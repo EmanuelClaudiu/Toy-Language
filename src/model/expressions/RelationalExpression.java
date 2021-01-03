@@ -3,7 +3,9 @@ package model.expressions;
 import data_structures.DictionaryInterface;
 import data_structures.Heap;
 import exceptions.MyException;
+import model.types.BoolType;
 import model.types.IntType;
+import model.types.Type;
 import model.values.BoolValue;
 import model.values.IntValue;
 import model.values.Value;
@@ -82,6 +84,22 @@ public class RelationalExpression implements Expression{
             throw new MyException("Relational Expression Exception: first operand is not an integer");
         }
         return new BoolValue(false); //should never reach here
+    }
+
+    @Override
+    public Type typecheck(DictionaryInterface<String, Type> typeEnv) throws MyException {
+        Type type1, type2;
+        type1=e1.typecheck(typeEnv);
+        type2=e2.typecheck(typeEnv);
+
+        if(type1.equals(new IntType())){
+            if(type2.equals(new IntType()))
+                return new BoolType();
+            else
+                throw new MyException("Relational Expr. Typecheck Exception: Second operand is not an integer.");
+        }
+        else
+            throw new MyException("Relational Expr. Typecheck Exception: First operand is not an integer;");
     }
 
 }

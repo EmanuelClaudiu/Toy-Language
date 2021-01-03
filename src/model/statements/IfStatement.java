@@ -5,6 +5,8 @@ import data_structures.Heap;
 import exceptions.MyException;
 import model.ProgramState;
 import model.expressions.Expression;
+import model.types.BoolType;
+import model.types.Type;
 import model.values.BoolValue;
 import model.values.Value;
 
@@ -42,6 +44,18 @@ public class IfStatement implements Statement{
             }
         }
         return null;
+    }
+
+    @Override
+    public DictionaryInterface<String, Type> typecheck(DictionaryInterface<String, Type> typeEnv) throws MyException {
+        Type typeExpr = expression.typecheck(typeEnv);
+        if(typeExpr.equals(new BoolType())) {
+            thenS.typecheck(typeEnv.clone());
+            elseS.typecheck(typeEnv.clone());
+            return typeEnv;
+        }
+        else
+            throw new MyException("If Statement Typecheck Exception: The condition of IF is not of type bool.");
     }
 
 }

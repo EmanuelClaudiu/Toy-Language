@@ -57,4 +57,20 @@ public class LogicExpression implements Expression{
         return new BoolValue(true); // should never reach this point
     }
 
+    @Override
+    public Type typecheck(DictionaryInterface<String, Type> typeEnv) throws MyException {
+        Type type1, type2;
+        type1=e1.typecheck(typeEnv);
+        type2=e2.typecheck(typeEnv);
+
+        if(type1.equals(new BoolType())){
+            if(type2.equals(new BoolType()))
+                return new BoolType();
+            else
+                throw new MyException("Logic Expr. Typecheck Exception: Second operand is not a boolean.");
+        }
+        else
+            throw new MyException("Logic Expr. Typecheck Exception: First operand is not a boolean.");
+    }
+
 }

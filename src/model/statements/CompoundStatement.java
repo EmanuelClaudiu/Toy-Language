@@ -1,8 +1,10 @@
 package model.statements;
 
+import data_structures.DictionaryInterface;
 import data_structures.StackInterface;
 import exceptions.MyException;
 import model.ProgramState;
+import model.types.Type;
 
 public class CompoundStatement implements Statement{
 
@@ -24,6 +26,14 @@ public class CompoundStatement implements Statement{
         stack.push(second);
         stack.push(first);
         return null;
+    }
+
+    @Override
+    public DictionaryInterface<String, Type> typecheck(DictionaryInterface<String, Type> typeEnv) throws MyException {
+        //MyIDictionary<String,Type> typEnv1 = first.typecheck(typeEnv);
+        // MyIDictionary<String,Type> typEnv2 = snd.typecheck(typEnv1);
+        // return typEnv2;
+        return second.typecheck(first.typecheck(typeEnv));
     }
 
 }

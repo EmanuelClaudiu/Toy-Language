@@ -7,6 +7,7 @@ import exceptions.MyException;
 import model.ProgramState;
 import model.expressions.Expression;
 import model.types.StringType;
+import model.types.Type;
 import model.values.IntValue;
 import model.values.StringValue;
 import model.values.Value;
@@ -68,6 +69,16 @@ public class ReadFile implements Statement {
         }
 
         return null;
+    }
+
+    @Override
+    public DictionaryInterface<String, Type> typecheck(DictionaryInterface<String, Type> typeEnv) throws MyException {
+        Type typeExpr = expression.typecheck(typeEnv);
+        if(typeExpr.equals(new StringType())){
+            return typeEnv;
+        }
+        else
+            throw new MyException("ReadFile Statement Typecheck Exception: Expression is not a String Type.");
     }
 
 }

@@ -79,4 +79,9 @@ public class Heap<K, V> implements DictionaryInterface {
         dictionary = (HashMap<K,V>) _newMap;
     }
 
+    @Override
+    public Heap<K, V> clone() {
+        return null;
+    }
+
 }

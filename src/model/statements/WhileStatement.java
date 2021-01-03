@@ -1,10 +1,12 @@
 package model.statements;
 
+import data_structures.DictionaryInterface;
 import data_structures.StackInterface;
 import exceptions.MyException;
 import model.ProgramState;
 import model.expressions.Expression;
 import model.types.BoolType;
+import model.types.Type;
 import model.values.BoolValue;
 import model.values.Value;
 
@@ -41,6 +43,17 @@ public class WhileStatement implements Statement{
         }
 
         return null;
+    }
+
+    @Override
+    public DictionaryInterface<String, Type> typecheck(DictionaryInterface<String, Type> typeEnv) throws MyException {
+        Type typeExpr = expression.typecheck(typeEnv);
+        if(typeExpr.equals(new BoolType())){
+            statement.typecheck(typeEnv);
+            return typeEnv;
+        }
+        else
+            throw new MyException("While Statement Typecheck Exception: Condition expression is not a boolean type.");
     }
 
 }

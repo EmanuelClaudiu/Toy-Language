@@ -1,0 +1,867 @@
+Program Id:
+1
+Execution Stack:
+a=int;v=int;a=2;if(a>=v)then(print(a is greater))else(print(v is greater));print(Done)
+
+Symbols Table:
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+a=int
+v=int;a=2;if(a>=v)then(print(a is greater))else(print(v is greater));print(Done)
+
+Symbols Table:
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+a=int
+v=int;a=2;if(a>=v)then(print(a is greater))else(print(v is greater));print(Done)
+
+Symbols Table:
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=int;a=2;if(a>=v)then(print(a is greater))else(print(v is greater));print(Done)
+
+Symbols Table:
+a --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=int;a=2;if(a>=v)then(print(a is greater))else(print(v is greater));print(Done)
+
+Symbols Table:
+a --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=int
+a=2;if(a>=v)then(print(a is greater))else(print(v is greater));print(Done)
+
+Symbols Table:
+a --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=int
+a=2;if(a>=v)then(print(a is greater))else(print(v is greater));print(Done)
+
+Symbols Table:
+a --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+a=2;if(a>=v)then(print(a is greater))else(print(v is greater));print(Done)
+
+Symbols Table:
+a --> 0
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+a=2;if(a>=v)then(print(a is greater))else(print(v is greater));print(Done)
+
+Symbols Table:
+a --> 0
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+a=2
+if(a>=v)then(print(a is greater))else(print(v is greater));print(Done)
+
+Symbols Table:
+a --> 0
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+a=2
+if(a>=v)then(print(a is greater))else(print(v is greater));print(Done)
+
+Symbols Table:
+a --> 0
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+if(a>=v)then(print(a is greater))else(print(v is greater));print(Done)
+
+Symbols Table:
+a --> 2
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+if(a>=v)then(print(a is greater))else(print(v is greater));print(Done)
+
+Symbols Table:
+a --> 2
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+if(a>=v)then(print(a is greater))else(print(v is greater))
+print(Done)
+
+Symbols Table:
+a --> 2
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+if(a>=v)then(print(a is greater))else(print(v is greater))
+print(Done)
+
+Symbols Table:
+a --> 2
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+print(Done)
+
+Symbols Table:
+a --> 2
+v --> 0
+
+Output:
+a is greater
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+print(Done)
+
+Symbols Table:
+a --> 2
+v --> 0
+
+Output:
+a is greater
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+
+Symbols Table:
+a --> 2
+v --> 0
+
+Output:
+a is greater
+Done
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+a=int;v=int;a=2;if(a>=v)then(print(a is greater))else(print(v is greater));print(Done)
+
+Symbols Table:
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+a=int
+v=int;a=2;if(a>=v)then(print(a is greater))else(print(v is greater));print(Done)
+
+Symbols Table:
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+a=int
+v=int;a=2;if(a>=v)then(print(a is greater))else(print(v is greater));print(Done)
+
+Symbols Table:
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=int;a=2;if(a>=v)then(print(a is greater))else(print(v is greater));print(Done)
+
+Symbols Table:
+a --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=int;a=2;if(a>=v)then(print(a is greater))else(print(v is greater));print(Done)
+
+Symbols Table:
+a --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=int
+a=2;if(a>=v)then(print(a is greater))else(print(v is greater));print(Done)
+
+Symbols Table:
+a --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=int
+a=2;if(a>=v)then(print(a is greater))else(print(v is greater));print(Done)
+
+Symbols Table:
+a --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+a=2;if(a>=v)then(print(a is greater))else(print(v is greater));print(Done)
+
+Symbols Table:
+a --> 0
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+a=2;if(a>=v)then(print(a is greater))else(print(v is greater));print(Done)
+
+Symbols Table:
+a --> 0
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+a=2
+if(a>=v)then(print(a is greater))else(print(v is greater));print(Done)
+
+Symbols Table:
+a --> 0
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+a=2
+if(a>=v)then(print(a is greater))else(print(v is greater));print(Done)
+
+Symbols Table:
+a --> 0
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+if(a>=v)then(print(a is greater))else(print(v is greater));print(Done)
+
+Symbols Table:
+a --> 2
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+if(a>=v)then(print(a is greater))else(print(v is greater));print(Done)
+
+Symbols Table:
+a --> 2
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+if(a>=v)then(print(a is greater))else(print(v is greater))
+print(Done)
+
+Symbols Table:
+a --> 2
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+if(a>=v)then(print(a is greater))else(print(v is greater))
+print(Done)
+
+Symbols Table:
+a --> 2
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+print(Done)
+
+Symbols Table:
+a --> 2
+v --> 0
+
+Output:
+a is greater
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+print(Done)
+
+Symbols Table:
+a --> 2
+v --> 0
+
+Output:
+a is greater
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+
+Symbols Table:
+a --> 2
+v --> 0
+
+Output:
+a is greater
+Done
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+a=int;v=int;a=2;if(a>=v)then(print(a is greater))else(print(v is greater));print(Done)
+
+Symbols Table:
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+a=int
+v=int;a=2;if(a>=v)then(print(a is greater))else(print(v is greater));print(Done)
+
+Symbols Table:
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+a=int
+v=int;a=2;if(a>=v)then(print(a is greater))else(print(v is greater));print(Done)
+
+Symbols Table:
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=int;a=2;if(a>=v)then(print(a is greater))else(print(v is greater));print(Done)
+
+Symbols Table:
+a --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=int;a=2;if(a>=v)then(print(a is greater))else(print(v is greater));print(Done)
+
+Symbols Table:
+a --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=int
+a=2;if(a>=v)then(print(a is greater))else(print(v is greater));print(Done)
+
+Symbols Table:
+a --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=int
+a=2;if(a>=v)then(print(a is greater))else(print(v is greater));print(Done)
+
+Symbols Table:
+a --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+a=2;if(a>=v)then(print(a is greater))else(print(v is greater));print(Done)
+
+Symbols Table:
+a --> 0
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+a=2;if(a>=v)then(print(a is greater))else(print(v is greater));print(Done)
+
+Symbols Table:
+a --> 0
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+a=2
+if(a>=v)then(print(a is greater))else(print(v is greater));print(Done)
+
+Symbols Table:
+a --> 0
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+a=2
+if(a>=v)then(print(a is greater))else(print(v is greater));print(Done)
+
+Symbols Table:
+a --> 0
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+if(a>=v)then(print(a is greater))else(print(v is greater));print(Done)
+
+Symbols Table:
+a --> 2
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+if(a>=v)then(print(a is greater))else(print(v is greater));print(Done)
+
+Symbols Table:
+a --> 2
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+if(a>=v)then(print(a is greater))else(print(v is greater))
+print(Done)
+
+Symbols Table:
+a --> 2
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+if(a>=v)then(print(a is greater))else(print(v is greater))
+print(Done)
+
+Symbols Table:
+a --> 2
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+print(Done)
+
+Symbols Table:
+a --> 2
+v --> 0
+
+Output:
+a is greater
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+print(Done)
+
+Symbols Table:
+a --> 2
+v --> 0
+
+Output:
+a is greater
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+
+Symbols Table:
+a --> 2
+v --> 0
+
+Output:
+a is greater
+Done
+
+File Table:
+
+Heap:
+
+--------------------

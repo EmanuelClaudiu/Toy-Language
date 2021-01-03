@@ -1,0 +1,833 @@
+Program Id:
+1
+Execution Stack:
+v=int;v=4;(while(v>0) print(v);v=v-1);print(100)
+
+Symbols Table:
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=int
+v=4;(while(v>0) print(v);v=v-1);print(100)
+
+Symbols Table:
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=int
+v=4;(while(v>0) print(v);v=v-1);print(100)
+
+Symbols Table:
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=4;(while(v>0) print(v);v=v-1);print(100)
+
+Symbols Table:
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=4;(while(v>0) print(v);v=v-1);print(100)
+
+Symbols Table:
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=4
+(while(v>0) print(v);v=v-1);print(100)
+
+Symbols Table:
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=4
+(while(v>0) print(v);v=v-1);print(100)
+
+Symbols Table:
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+(while(v>0) print(v);v=v-1);print(100)
+
+Symbols Table:
+v --> 4
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+(while(v>0) print(v);v=v-1);print(100)
+
+Symbols Table:
+v --> 4
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+(while(v>0) print(v);v=v-1)
+print(100)
+
+Symbols Table:
+v --> 4
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+(while(v>0) print(v);v=v-1)
+print(100)
+
+Symbols Table:
+v --> 4
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+print(v);v=v-1
+(while(v>0) print(v);v=v-1)
+print(100)
+
+Symbols Table:
+v --> 4
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+print(v);v=v-1
+(while(v>0) print(v);v=v-1)
+print(100)
+
+Symbols Table:
+v --> 4
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+print(v)
+v=v-1
+(while(v>0) print(v);v=v-1)
+print(100)
+
+Symbols Table:
+v --> 4
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+print(v)
+v=v-1
+(while(v>0) print(v);v=v-1)
+print(100)
+
+Symbols Table:
+v --> 4
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=v-1
+(while(v>0) print(v);v=v-1)
+print(100)
+
+Symbols Table:
+v --> 4
+
+Output:
+4
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=v-1
+(while(v>0) print(v);v=v-1)
+print(100)
+
+Symbols Table:
+v --> 4
+
+Output:
+4
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+(while(v>0) print(v);v=v-1)
+print(100)
+
+Symbols Table:
+v --> 3
+
+Output:
+4
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+(while(v>0) print(v);v=v-1)
+print(100)
+
+Symbols Table:
+v --> 3
+
+Output:
+4
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+print(v);v=v-1
+(while(v>0) print(v);v=v-1)
+print(100)
+
+Symbols Table:
+v --> 3
+
+Output:
+4
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+print(v);v=v-1
+(while(v>0) print(v);v=v-1)
+print(100)
+
+Symbols Table:
+v --> 3
+
+Output:
+4
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+print(v)
+v=v-1
+(while(v>0) print(v);v=v-1)
+print(100)
+
+Symbols Table:
+v --> 3
+
+Output:
+4
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+print(v)
+v=v-1
+(while(v>0) print(v);v=v-1)
+print(100)
+
+Symbols Table:
+v --> 3
+
+Output:
+4
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=v-1
+(while(v>0) print(v);v=v-1)
+print(100)
+
+Symbols Table:
+v --> 3
+
+Output:
+4
+3
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=v-1
+(while(v>0) print(v);v=v-1)
+print(100)
+
+Symbols Table:
+v --> 3
+
+Output:
+4
+3
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+(while(v>0) print(v);v=v-1)
+print(100)
+
+Symbols Table:
+v --> 2
+
+Output:
+4
+3
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+(while(v>0) print(v);v=v-1)
+print(100)
+
+Symbols Table:
+v --> 2
+
+Output:
+4
+3
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+print(v);v=v-1
+(while(v>0) print(v);v=v-1)
+print(100)
+
+Symbols Table:
+v --> 2
+
+Output:
+4
+3
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+print(v);v=v-1
+(while(v>0) print(v);v=v-1)
+print(100)
+
+Symbols Table:
+v --> 2
+
+Output:
+4
+3
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+print(v)
+v=v-1
+(while(v>0) print(v);v=v-1)
+print(100)
+
+Symbols Table:
+v --> 2
+
+Output:
+4
+3
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+print(v)
+v=v-1
+(while(v>0) print(v);v=v-1)
+print(100)
+
+Symbols Table:
+v --> 2
+
+Output:
+4
+3
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=v-1
+(while(v>0) print(v);v=v-1)
+print(100)
+
+Symbols Table:
+v --> 2
+
+Output:
+4
+3
+2
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=v-1
+(while(v>0) print(v);v=v-1)
+print(100)
+
+Symbols Table:
+v --> 2
+
+Output:
+4
+3
+2
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+(while(v>0) print(v);v=v-1)
+print(100)
+
+Symbols Table:
+v --> 1
+
+Output:
+4
+3
+2
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+(while(v>0) print(v);v=v-1)
+print(100)
+
+Symbols Table:
+v --> 1
+
+Output:
+4
+3
+2
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+print(v);v=v-1
+(while(v>0) print(v);v=v-1)
+print(100)
+
+Symbols Table:
+v --> 1
+
+Output:
+4
+3
+2
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+print(v);v=v-1
+(while(v>0) print(v);v=v-1)
+print(100)
+
+Symbols Table:
+v --> 1
+
+Output:
+4
+3
+2
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+print(v)
+v=v-1
+(while(v>0) print(v);v=v-1)
+print(100)
+
+Symbols Table:
+v --> 1
+
+Output:
+4
+3
+2
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+print(v)
+v=v-1
+(while(v>0) print(v);v=v-1)
+print(100)
+
+Symbols Table:
+v --> 1
+
+Output:
+4
+3
+2
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=v-1
+(while(v>0) print(v);v=v-1)
+print(100)
+
+Symbols Table:
+v --> 1
+
+Output:
+4
+3
+2
+1
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=v-1
+(while(v>0) print(v);v=v-1)
+print(100)
+
+Symbols Table:
+v --> 1
+
+Output:
+4
+3
+2
+1
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+(while(v>0) print(v);v=v-1)
+print(100)
+
+Symbols Table:
+v --> 0
+
+Output:
+4
+3
+2
+1
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+(while(v>0) print(v);v=v-1)
+print(100)
+
+Symbols Table:
+v --> 0
+
+Output:
+4
+3
+2
+1
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+print(100)
+
+Symbols Table:
+v --> 0
+
+Output:
+4
+3
+2
+1
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+print(100)
+
+Symbols Table:
+v --> 0
+
+Output:
+4
+3
+2
+1
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+
+Symbols Table:
+v --> 0
+
+Output:
+4
+3
+2
+1
+100
+
+File Table:
+
+Heap:
+
+--------------------

@@ -6,10 +6,7 @@ import exceptions.MyException;
 import model.ProgramState;
 import model.expressions.*;
 import model.statements.*;
-import model.types.BoolType;
-import model.types.IntType;
-import model.types.RefType;
-import model.types.StringType;
+import model.types.*;
 import model.values.BoolValue;
 import model.values.IntValue;
 import model.values.StringValue;
@@ -18,6 +15,7 @@ import repository.MemoryRepository;
 import repository.Repository;
 
 import java.io.*;
+import java.util.ArrayList;
 
 public class Interpretter {
 
@@ -33,7 +31,7 @@ public class Interpretter {
         logFile.close();
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws MyException {
 
         // example 1
         Statement ex1 = new CompoundStatement
@@ -50,11 +48,13 @@ public class Interpretter {
         MyArray<Value> output1 = new MyArray<Value>();
         FileTable<StringValue, BufferedReader> fileTable1 = new FileTable<StringValue, BufferedReader>();
         Heap<Integer, Value> heap1 = new Heap<Integer, Value>();
+        MyDictionary<String, Type> typeEnv1 = new MyDictionary<String, Type>();
         executionStack1.clear();
         executionStack1.push(ex1);
         symbolsTable1.clear();
         output1.clear();
         heap1.clear();
+        ex1.typecheck(typeEnv1);
         ProgramState programState1 = new ProgramState(executionStack1, symbolsTable1, output1, fileTable1, heap1);
         Repository repo1 = new MemoryRepository(programState1, "out1.txt");
         Controller controller1 = new Controller(repo1);
@@ -91,11 +91,13 @@ public class Interpretter {
         MyArray<Value> output2 = new MyArray<Value>();
         FileTable<StringValue, BufferedReader> fileTable2 = new FileTable<StringValue, BufferedReader>();
         Heap<Integer, Value> heap2 = new Heap<Integer, Value>();
+        MyDictionary<String, Type> typeEnv2 = new MyDictionary<String, Type>();
         executionStack2.clear();
         executionStack2.push(ex2);
         symbolsTable2.clear();
         output2.clear();
         heap2.clear();
+        ex2.typecheck(typeEnv2);
         ProgramState programState2 = new ProgramState(executionStack2, symbolsTable2, output2, fileTable2, heap2);
         Repository repo2 = new MemoryRepository(programState2, "out2.txt");
         Controller controller2 = new Controller(repo2);
@@ -128,11 +130,13 @@ public class Interpretter {
         MyArray<Value> output3 = new MyArray<Value>();
         FileTable<StringValue, BufferedReader> fileTable3 = new FileTable<StringValue, BufferedReader>();
         Heap<Integer, Value> heap3 = new Heap<Integer, Value>();
+        MyDictionary<String, Type> typeEnv3 = new MyDictionary<String, Type>();
         executionStack3.clear();
         executionStack3.push(ex3);
         symbolsTable3.clear();
         output3.clear();
         heap3.clear();
+        ex3.typecheck(typeEnv3);
         ProgramState programState3 = new ProgramState(executionStack3, symbolsTable3, output3, fileTable3, heap3);
         Repository repo3 = new MemoryRepository(programState3, "out3.txt");
         Controller controller3 = new Controller(repo3);
@@ -168,11 +172,13 @@ public class Interpretter {
         MyArray<Value> output4 = new MyArray<Value>();
         FileTable<StringValue, BufferedReader> fileTable4 = new FileTable<StringValue, BufferedReader>();
         Heap<Integer, Value> heap4 = new Heap<Integer, Value>();
+        MyDictionary<String, Type> typeEnv4 = new MyDictionary<String, Type>();
         executionStack4.clear();
         executionStack4.push(ex4);
         symbolsTable4.clear();
         output4.clear();
         heap4.clear();
+        ex4.typecheck(typeEnv4);
         ProgramState programState4 = new ProgramState(executionStack4, symbolsTable4, output4, fileTable4, heap4);
         Repository repo4 = new MemoryRepository(programState4, "out4.txt");
         Controller controller4 = new Controller(repo4);
@@ -186,7 +192,7 @@ public class Interpretter {
                                         new VariableDeclarationStatement("v", new IntType()),
                                         new CompoundStatement
                                                 (
-                                                        new AssignStatement("a", new ValueExpression(new IntValue(5))),
+                                                        new AssignStatement("a", new ValueExpression(new IntValue(2))),
                                                         new CompoundStatement
                                                                 (
                                                                         new IfStatement
@@ -205,11 +211,13 @@ public class Interpretter {
         MyArray<Value> output5 = new MyArray<Value>();
         FileTable<StringValue, BufferedReader> fileTable5 = new FileTable<StringValue, BufferedReader>();
         Heap<Integer, Value> heap5 = new Heap<Integer, Value>();
+        MyDictionary<String, Type> typeEnv5 = new MyDictionary<String, Type>();
         executionStack5.clear();
         executionStack5.push(ex5);
         symbolsTable5.clear();
         output5.clear();
         heap5.clear();
+        ex5.typecheck(typeEnv5);
         ProgramState programState5 = new ProgramState(executionStack5, symbolsTable5, output5, fileTable5, heap5);
         Repository repo5 = new MemoryRepository(programState5, "out5.txt");
         Controller controller5 = new Controller(repo5);
@@ -223,7 +231,7 @@ public class Interpretter {
                                 new CompoundStatement(
                                         new PrintStatement(new ReadHeapExpression(new VariableExpression("v"))),
                                         new CompoundStatement(
-                                                new WriteHeapStatement("v", new ValueExpression(new IntValue(30))),
+                                                new WriteHeapStatement("v", new ValueExpression(new IntValue(20))),
                                                 new PrintStatement(new ReadHeapExpression(new VariableExpression("v")))
                                         )
                                 )
@@ -235,11 +243,13 @@ public class Interpretter {
         MyArray<Value> output6 = new MyArray<Value>();
         FileTable<StringValue, BufferedReader> fileTable6 = new FileTable<StringValue, BufferedReader>();
         Heap<Integer, Value> heap6 = new Heap<Integer, Value>();
+        MyDictionary<String, Type> typeEnv6 = new MyDictionary<String, Type>();
         executionStack6.clear();
         executionStack6.push(ex6);
         symbolsTable6.clear();
         output6.clear();
         heap6.clear();
+        ex6.typecheck(typeEnv6);
         ProgramState programState6 = new ProgramState(executionStack6, symbolsTable6, output6, fileTable6, heap6);
         Repository repo6 = new MemoryRepository(programState6, "out6.txt");
         Controller controller6 = new Controller(repo6);
@@ -266,11 +276,13 @@ public class Interpretter {
         MyArray<Value> output7 = new MyArray<Value>();
         FileTable<StringValue, BufferedReader> fileTable7 = new FileTable<StringValue, BufferedReader>();
         Heap<Integer, Value> heap7 = new Heap<Integer, Value>();
+        MyDictionary<String, Type> typeEnv7 = new MyDictionary<String, Type>();
         executionStack7.clear();
         executionStack7.push(ex7);
         symbolsTable7.clear();
         output7.clear();
         heap7.clear();
+        ex7.typecheck(typeEnv7);
         ProgramState programState7 = new ProgramState(executionStack7, symbolsTable7, output7, fileTable7, heap7);
         Repository repo7 = new MemoryRepository(programState7, "out7.txt");
         Controller controller7 = new Controller(repo7);
@@ -299,11 +311,13 @@ public class Interpretter {
         MyArray<Value> output8 = new MyArray<Value>();
         FileTable<StringValue, BufferedReader> fileTable8 = new FileTable<StringValue, BufferedReader>();
         Heap<Integer, Value> heap8 = new Heap<Integer, Value>();
+        MyDictionary<String, Type> typeEnv8 = new MyDictionary<String, Type>();
         executionStack8.clear();
         executionStack8.push(ex8);
         symbolsTable8.clear();
         output8.clear();
         heap8.clear();
+        ex8.typecheck(typeEnv8);
         ProgramState programState8 = new ProgramState(executionStack8, symbolsTable8, output8, fileTable8, heap8);
         Repository repo8 = new MemoryRepository(programState8, "out8.txt");
         Controller controller8 = new Controller(repo8);
@@ -346,11 +360,13 @@ public class Interpretter {
         MyArray<Value> output9 = new MyArray<Value>();
         FileTable<StringValue, BufferedReader> fileTable9 = new FileTable<StringValue, BufferedReader>();
         Heap<Integer, Value> heap9 = new Heap<Integer, Value>();
+        MyDictionary<String, Type> typeEnv9 = new MyDictionary<String, Type>();
         executionStack9.clear();
         executionStack9.push(ex9);
         symbolsTable9.clear();
         output9.clear();
         heap9.clear();
+        ex9.typecheck(typeEnv9);
         ProgramState programState9 = new ProgramState(executionStack9, symbolsTable9, output9, fileTable9, heap9);
         Repository repo9 = new MemoryRepository(programState9, "out9.txt");
         Controller controller9 = new Controller(repo9);

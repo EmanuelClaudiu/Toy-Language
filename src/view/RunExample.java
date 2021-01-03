@@ -1,7 +1,6 @@
 package view;
 
 import controller.Controller;
-import exceptions.MyException;
 
 public class RunExample extends Command {
 

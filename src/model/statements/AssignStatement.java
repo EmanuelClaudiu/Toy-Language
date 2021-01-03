@@ -45,4 +45,14 @@ public class AssignStatement implements Statement{
         return null;
     }
 
+    @Override
+    public DictionaryInterface<String, Type> typecheck(DictionaryInterface<String, Type> typeEnv) throws MyException {
+        Type typeVar = typeEnv.lookup(id);
+        Type typeExpr = expression.typecheck(typeEnv);
+        if(typeVar.equals(typeExpr))
+            return typeEnv;
+        else
+            throw new MyException("Assign Statement Typecheck Exception: Right hand side and left hand side have different types.");
+    }
+
 }

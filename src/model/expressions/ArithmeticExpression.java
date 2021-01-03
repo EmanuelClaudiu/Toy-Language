@@ -77,4 +77,20 @@ public class ArithmeticExpression implements Expression{
         return new IntValue(-1); // should never reach this point
     }
 
+    @Override
+    public Type typecheck(DictionaryInterface<String, Type> typeEnv) throws MyException {
+        Type type1, type2;
+        type1=e1.typecheck(typeEnv);
+        type2=e2.typecheck(typeEnv);
+
+        if(type1.equals(new IntType())){
+            if(type2.equals(new IntType()))
+                return new IntType();
+            else
+                throw new MyException("Arith. Expr. Typecheck Exception: Second operand is not an integer.");
+        }
+        else
+            throw new MyException("Arith. Expr. Typecheck Exception: First operand is not an integer.");
+    }
+
 }

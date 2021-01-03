@@ -17,5 +17,6 @@ public interface DictionaryInterface<K, V> {
 
     public HashMap<K,V> getContent();
     public void setContent(Map _newMap);
+    public DictionaryInterface<K, V> clone();
 
 }

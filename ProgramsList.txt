@@ -1,0 +1,10 @@
+0: exit
+1: v=int;v=2;print(v)
+2: a=int;b=int;a=2+3*5;b=a+1;print(b)
+3: a=boolean;v=int;a=true;if(a)then(v=2)else(v=3);print(v)
+4: v=string;v=file.txt;openRFile(v);c=int;readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+5: a=int;v=int;a=2;if(a>=v)then(print(a is greater))else(print(v is greater));print(Done)
+6: v=Ref(int);new(v,20);print(rH(v));wH(v,20);print(rH(v))
+7: v=int;v=4;(while(v>0) print(v);v=v-1);print(100)
+8: v=Ref(int);new(v,20);a=Ref(Ref(int));new(a,v);new(v,30);print(rH(rH(a)))
+9: v=int;a=Ref(int);v=10;new(a,22);fork(wH(a,30);v=32;print(v);print(rH(a)));print(v);print(rH(a))

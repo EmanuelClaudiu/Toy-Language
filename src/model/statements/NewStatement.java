@@ -6,6 +6,7 @@ import exceptions.MyException;
 import model.ProgramState;
 import model.expressions.Expression;
 import model.types.RefType;
+import model.types.Type;
 import model.values.RefValue;
 import model.values.Value;
 
@@ -49,6 +50,17 @@ public class NewStatement implements Statement{
         }
 
         return null;
+    }
+
+    @Override
+    public DictionaryInterface<String, Type> typecheck(DictionaryInterface<String, Type> typeEnv) throws MyException {
+        Type typeVar = typeEnv.lookup(pointerName);
+        Type typeExpr = expresion.typecheck(typeEnv);
+        if(typeVar.equals(new RefType(typeExpr))){
+            return typeEnv;
+        }
+        else
+            throw new MyException("New Statement Typecheck Exception: Right hand side and left hand side have different types");
     }
 
 }

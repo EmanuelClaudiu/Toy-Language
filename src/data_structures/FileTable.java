@@ -59,4 +59,9 @@ public class FileTable<K, V> implements DictionaryInterface{
         dictionary = (HashMap<K,V>) _newMap;
     }
 
+    @Override
+    public FileTable<K, V> clone() {
+        return null;
+    }
+
 }

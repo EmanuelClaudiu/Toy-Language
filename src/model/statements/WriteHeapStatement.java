@@ -6,8 +6,11 @@ import exceptions.MyException;
 import model.ProgramState;
 import model.expressions.Expression;
 import model.types.RefType;
+import model.types.Type;
 import model.values.RefValue;
 import model.values.Value;
+
+import java.sql.Ref;
 
 public class WriteHeapStatement implements Statement{
 
@@ -53,6 +56,17 @@ public class WriteHeapStatement implements Statement{
         }
 
         return null;
+    }
+
+    @Override
+    public DictionaryInterface<String, Type> typecheck(DictionaryInterface<String, Type> typeEnv) throws MyException {
+        Type typeVar = typeEnv.lookup(variable);
+        Type typeVarInner = ((RefType) typeVar).getInner();
+        Type typeExpr = expression.typecheck(typeEnv);
+        if(typeVarInner.equals(typeExpr))
+            return typeEnv;
+        else
+            throw new MyException("Write Heap Statement Typecheck Exception: Right hand side is not the same type as pointer.");
     }
 
 }

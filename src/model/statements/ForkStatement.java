@@ -3,6 +3,8 @@ package model.statements;
 import data_structures.*;
 import exceptions.MyException;
 import model.ProgramState;
+import model.types.BoolType;
+import model.types.Type;
 import model.values.StringValue;
 import model.values.Value;
 
@@ -52,6 +54,12 @@ public class ForkStatement implements Statement {
         //------------------------------------------------------------------
 
         return childProgramState;
+    }
+
+    @Override
+    public DictionaryInterface<String, Type> typecheck(DictionaryInterface<String, Type> typeEnv) throws MyException {
+        innerStatement.typecheck(typeEnv);
+        return typeEnv;
     }
 
 }

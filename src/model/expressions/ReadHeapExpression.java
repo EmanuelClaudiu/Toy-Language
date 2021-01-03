@@ -3,6 +3,8 @@ package model.expressions;
 import data_structures.DictionaryInterface;
 import data_structures.Heap;
 import exceptions.MyException;
+import model.types.RefType;
+import model.types.Type;
 import model.values.BoolValue;
 import model.values.IntValue;
 import model.values.RefValue;
@@ -36,6 +38,18 @@ public class ReadHeapExpression implements Expression {
         else{
             throw new MyException("Read Heap Expression Exception: Expression evaluation is not a Ref Value.");
         }
+    }
+
+    @Override
+    public Type typecheck(DictionaryInterface<String, Type> typeEnv) throws MyException {
+        Type type = expression.typecheck(typeEnv);
+
+        if(type instanceof RefType) {
+            RefType refType =(RefType) type;
+            return refType.getInner();
+        }
+        else
+            throw new MyException("rH Expr. Typecheck Exception: The rH argument is not a Ref Type.");
     }
 
 }
