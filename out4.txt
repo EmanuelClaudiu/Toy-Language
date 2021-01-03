@@ -8653,3 +8653,1001 @@ File Table:
 Heap:
 
 --------------------
+Program Id:
+1
+Execution Stack:
+v=string;v=file.txt;openRFile(v);c=int;readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=string
+v=file.txt;openRFile(v);c=int;readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=string
+v=file.txt;openRFile(v);c=int;readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=file.txt;openRFile(v);c=int;readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+v --> 
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=file.txt;openRFile(v);c=int;readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+v --> 
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=file.txt
+openRFile(v);c=int;readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+v --> 
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=file.txt
+openRFile(v);c=int;readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+v --> 
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+openRFile(v);c=int;readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+v --> file.txt
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+openRFile(v);c=int;readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+v --> file.txt
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+openRFile(v)
+c=int;readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+v --> file.txt
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+openRFile(v)
+c=int;readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+v --> file.txt
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+c=int;readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+v --> file.txt
+
+Output:
+
+File Table:
+file.txt
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+c=int;readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+v --> file.txt
+
+Output:
+
+File Table:
+file.txt
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+c=int
+readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+v --> file.txt
+
+Output:
+
+File Table:
+file.txt
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+c=int
+readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+v --> file.txt
+
+Output:
+
+File Table:
+file.txt
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+c --> 0
+v --> file.txt
+
+Output:
+
+File Table:
+file.txt
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+c --> 0
+v --> file.txt
+
+Output:
+
+File Table:
+file.txt
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+readFile(v,c)
+print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+c --> 0
+v --> file.txt
+
+Output:
+
+File Table:
+file.txt
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+readFile(v,c)
+print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+c --> 0
+v --> file.txt
+
+Output:
+
+File Table:
+file.txt
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+c --> 15
+v --> file.txt
+
+Output:
+
+File Table:
+file.txt
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+c --> 15
+v --> file.txt
+
+Output:
+
+File Table:
+file.txt
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+print(c)
+readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+c --> 15
+v --> file.txt
+
+Output:
+
+File Table:
+file.txt
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=string;v=file.txt;openRFile(v);c=int;readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=string
+v=file.txt;openRFile(v);c=int;readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=string
+v=file.txt;openRFile(v);c=int;readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=file.txt;openRFile(v);c=int;readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+v --> 
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=file.txt;openRFile(v);c=int;readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+v --> 
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=file.txt
+openRFile(v);c=int;readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+v --> 
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=file.txt
+openRFile(v);c=int;readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+v --> 
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+openRFile(v);c=int;readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+v --> file.txt
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+openRFile(v);c=int;readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+v --> file.txt
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+openRFile(v)
+c=int;readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+v --> file.txt
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+openRFile(v)
+c=int;readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+v --> file.txt
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+c=int;readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+v --> file.txt
+
+Output:
+
+File Table:
+file.txt
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+c=int;readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+v --> file.txt
+
+Output:
+
+File Table:
+file.txt
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+c=int
+readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+v --> file.txt
+
+Output:
+
+File Table:
+file.txt
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+c=int
+readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+v --> file.txt
+
+Output:
+
+File Table:
+file.txt
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+c --> 0
+v --> file.txt
+
+Output:
+
+File Table:
+file.txt
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+c --> 0
+v --> file.txt
+
+Output:
+
+File Table:
+file.txt
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+readFile(v,c)
+print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+c --> 0
+v --> file.txt
+
+Output:
+
+File Table:
+file.txt
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+readFile(v,c)
+print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+c --> 0
+v --> file.txt
+
+Output:
+
+File Table:
+file.txt
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+c --> 15
+v --> file.txt
+
+Output:
+
+File Table:
+file.txt
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=string;v=file.txt;openRFile(v);c=int;readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=string
+v=file.txt;openRFile(v);c=int;readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=string
+v=file.txt;openRFile(v);c=int;readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=file.txt;openRFile(v);c=int;readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+v --> 
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=file.txt;openRFile(v);c=int;readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+v --> 
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=file.txt
+openRFile(v);c=int;readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+v --> 
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=file.txt
+openRFile(v);c=int;readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+v --> 
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+openRFile(v);c=int;readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+v --> file.txt
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+openRFile(v);c=int;readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+v --> file.txt
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+openRFile(v)
+c=int;readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+v --> file.txt
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+openRFile(v)
+c=int;readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+v --> file.txt
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+c=int;readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+v --> file.txt
+
+Output:
+
+File Table:
+file.txt
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+c=int;readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+v --> file.txt
+
+Output:
+
+File Table:
+file.txt
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+c=int
+readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+v --> file.txt
+
+Output:
+
+File Table:
+file.txt
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+c=int
+readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+v --> file.txt
+
+Output:
+
+File Table:
+file.txt
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+c --> 0
+v --> file.txt
+
+Output:
+
+File Table:
+file.txt
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+readFile(v,c);print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+c --> 0
+v --> file.txt
+
+Output:
+
+File Table:
+file.txt
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+readFile(v,c)
+print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+c --> 0
+v --> file.txt
+
+Output:
+
+File Table:
+file.txt
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+readFile(v,c)
+print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+c --> 0
+v --> file.txt
+
+Output:
+
+File Table:
+file.txt
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+print(c);readFile(v,c);print(c);closeRFile(v)
+
+Symbols Table:
+c --> 15
+v --> file.txt
+
+Output:
+
+File Table:
+file.txt
+
+Heap:
+
+--------------------

@@ -28,6 +28,7 @@ public class MainWindowGUI extends Application {
     public Scene scene;
     public Controller controller;
     public static Integer programToRun;
+    List<ProgramState> programStateList;
     public HBox labelsLayout = new HBox();
     public Label runningProgramLabel;
     public Label numberOfPrgStatesLabel;
@@ -80,18 +81,9 @@ public class MainWindowGUI extends Application {
         numberOfPrgStatesLabel = new Label("Number of program states: 1");
         oneStepButton = new Button("One Step");
         //setting up the oneStep action
-        //controller.executor = Executors.newFixedThreadPool(2);
-        //List<ProgramState> programStateList = controller.removeCompletedProgram(controller.repo.getProgramList());
-        oneStepButton.setOnAction(e -> {
-            try {
-                controller.allStep();
-            } catch (MyException myException) {
-                myException.printStackTrace();
-            } catch (InterruptedException interruptedException) {
-                interruptedException.printStackTrace();
-            }
-            setAllViews();
-        });
+        controller.executor = Executors.newFixedThreadPool(2);
+        programStateList = controller.removeCompletedProgram(controller.repo.getProgramList());
+        oneStepButton.setOnAction(e -> oneStep());
         labelsLayout.setPadding(new Insets(20, 20, 20, 20));
         labelsLayout.setSpacing(30);
         labelsLayout.getChildren().addAll(runningProgramLabel, numberOfPrgStatesLabel, oneStepButton);
@@ -150,6 +142,26 @@ public class MainWindowGUI extends Application {
 
     }
 
+    //onAction METHODS
+
+    public void oneStep(){
+        try {
+            if(programStateList.size() > 0) {
+                controller.conservativeGarbageCollector();
+                controller.oneStepForAllPrograms(programStateList);
+                //remove the completed programs
+                programStateList = controller.removeCompletedProgram(controller.repo.getProgramList());
+            }
+            else{
+                controller.executor.shutdownNow();
+                controller.repo.setProgramList(programStateList);
+            }
+        } catch (InterruptedException interruptedException) {
+            interruptedException.printStackTrace();
+        }
+        setAllViews();
+    }
+
     //TABLE VIEWS HANDLERS
 
     public ObservableList<HeapEntry> getHeapEntries(Heap _heap){
@@ -190,15 +202,19 @@ public class MainWindowGUI extends Application {
     }
 
     public void setOutListView(){
-        for(Object entry : controller.repo.getCurrentProgramState().output.getContent()){
-            outListView.getItems().add(entry.toString());
+        if(controller.repo.getProgramList().size() != 0) { //if program still running
+            for (Object entry : controller.repo.getCurrentProgramState().output.getContent()) {
+                outListView.getItems().add(entry.toString());
+            }
         }
     }
 
     public void setFileTableListView(){
-        HashMap<StringValue, BufferedReader> fileTable = controller.repo.getCurrentProgramState().fileTable.getContent();
-        for(Object entry : fileTable.keySet()){
-            fileTableListView.getItems().add(entry.toString() + " -> " + fileTable.get(entry).toString());
+        if(controller.repo.getProgramList().size() != 0) { //if program still running
+            HashMap<StringValue, BufferedReader> fileTable = controller.repo.getCurrentProgramState().fileTable.getContent();
+            for (Object entry : fileTable.keySet()) {
+                fileTableListView.getItems().add(entry.toString() + " -> " + fileTable.get(entry).toString());
+            }
         }
     }
 

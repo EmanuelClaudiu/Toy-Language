@@ -1430,3 +1430,491 @@ Heap:
 1 --> 30
 
 --------------------
+Program Id:
+1
+Execution Stack:
+v=int;a=Ref(int);v=10;new(a,22);fork(wH(a,30);v=32;print(v);print(rH(a)));print(v);print(rH(a))
+
+Symbols Table:
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=int
+a=Ref(int);v=10;new(a,22);fork(wH(a,30);v=32;print(v);print(rH(a)));print(v);print(rH(a))
+
+Symbols Table:
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=int
+a=Ref(int);v=10;new(a,22);fork(wH(a,30);v=32;print(v);print(rH(a)));print(v);print(rH(a))
+
+Symbols Table:
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+a=Ref(int);v=10;new(a,22);fork(wH(a,30);v=32;print(v);print(rH(a)));print(v);print(rH(a))
+
+Symbols Table:
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+a=Ref(int);v=10;new(a,22);fork(wH(a,30);v=32;print(v);print(rH(a)));print(v);print(rH(a))
+
+Symbols Table:
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+a=Ref(int)
+v=10;new(a,22);fork(wH(a,30);v=32;print(v);print(rH(a)));print(v);print(rH(a))
+
+Symbols Table:
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+a=Ref(int)
+v=10;new(a,22);fork(wH(a,30);v=32;print(v);print(rH(a)));print(v);print(rH(a))
+
+Symbols Table:
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=10;new(a,22);fork(wH(a,30);v=32;print(v);print(rH(a)));print(v);print(rH(a))
+
+Symbols Table:
+a --> (0,int)
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=int;a=Ref(int);v=10;new(a,22);fork(wH(a,30);v=32;print(v);print(rH(a)));print(v);print(rH(a))
+
+Symbols Table:
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=int
+a=Ref(int);v=10;new(a,22);fork(wH(a,30);v=32;print(v);print(rH(a)));print(v);print(rH(a))
+
+Symbols Table:
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=int
+a=Ref(int);v=10;new(a,22);fork(wH(a,30);v=32;print(v);print(rH(a)));print(v);print(rH(a))
+
+Symbols Table:
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+a=Ref(int);v=10;new(a,22);fork(wH(a,30);v=32;print(v);print(rH(a)));print(v);print(rH(a))
+
+Symbols Table:
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+a=Ref(int);v=10;new(a,22);fork(wH(a,30);v=32;print(v);print(rH(a)));print(v);print(rH(a))
+
+Symbols Table:
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+a=Ref(int)
+v=10;new(a,22);fork(wH(a,30);v=32;print(v);print(rH(a)));print(v);print(rH(a))
+
+Symbols Table:
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+a=Ref(int)
+v=10;new(a,22);fork(wH(a,30);v=32;print(v);print(rH(a)));print(v);print(rH(a))
+
+Symbols Table:
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=10;new(a,22);fork(wH(a,30);v=32;print(v);print(rH(a)));print(v);print(rH(a))
+
+Symbols Table:
+a --> (0,int)
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=int;a=Ref(int);v=10;new(a,22);fork(wH(a,30);v=32;print(v);print(rH(a)));print(v);print(rH(a))
+
+Symbols Table:
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=int
+a=Ref(int);v=10;new(a,22);fork(wH(a,30);v=32;print(v);print(rH(a)));print(v);print(rH(a))
+
+Symbols Table:
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=int
+a=Ref(int);v=10;new(a,22);fork(wH(a,30);v=32;print(v);print(rH(a)));print(v);print(rH(a))
+
+Symbols Table:
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+a=Ref(int);v=10;new(a,22);fork(wH(a,30);v=32;print(v);print(rH(a)));print(v);print(rH(a))
+
+Symbols Table:
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+a=Ref(int);v=10;new(a,22);fork(wH(a,30);v=32;print(v);print(rH(a)));print(v);print(rH(a))
+
+Symbols Table:
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+a=Ref(int)
+v=10;new(a,22);fork(wH(a,30);v=32;print(v);print(rH(a)));print(v);print(rH(a))
+
+Symbols Table:
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+a=Ref(int)
+v=10;new(a,22);fork(wH(a,30);v=32;print(v);print(rH(a)));print(v);print(rH(a))
+
+Symbols Table:
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=10;new(a,22);fork(wH(a,30);v=32;print(v);print(rH(a)));print(v);print(rH(a))
+
+Symbols Table:
+a --> (0,int)
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=int;a=Ref(int);v=10;new(a,22);fork(wH(a,30);v=32;print(v);print(rH(a)));print(v);print(rH(a))
+
+Symbols Table:
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=int
+a=Ref(int);v=10;new(a,22);fork(wH(a,30);v=32;print(v);print(rH(a)));print(v);print(rH(a))
+
+Symbols Table:
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=int
+a=Ref(int);v=10;new(a,22);fork(wH(a,30);v=32;print(v);print(rH(a)));print(v);print(rH(a))
+
+Symbols Table:
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+a=Ref(int);v=10;new(a,22);fork(wH(a,30);v=32;print(v);print(rH(a)));print(v);print(rH(a))
+
+Symbols Table:
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+a=Ref(int);v=10;new(a,22);fork(wH(a,30);v=32;print(v);print(rH(a)));print(v);print(rH(a))
+
+Symbols Table:
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+a=Ref(int)
+v=10;new(a,22);fork(wH(a,30);v=32;print(v);print(rH(a)));print(v);print(rH(a))
+
+Symbols Table:
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+a=Ref(int)
+v=10;new(a,22);fork(wH(a,30);v=32;print(v);print(rH(a)));print(v);print(rH(a))
+
+Symbols Table:
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+v=10;new(a,22);fork(wH(a,30);v=32;print(v);print(rH(a)));print(v);print(rH(a))
+
+Symbols Table:
+a --> (0,int)
+v --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
