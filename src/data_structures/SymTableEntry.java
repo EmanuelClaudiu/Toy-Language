@@ -5,9 +5,9 @@ import model.values.Value;
 public class SymTableEntry {
 
     public String id;
-    public Value value;
+    public String value;
 
-    public SymTableEntry(String id, Value s) {
+    public SymTableEntry(String id, String s) {
         this.id = id;
         this.value = s;
     }
@@ -16,7 +16,7 @@ public class SymTableEntry {
         return id;
     }
 
-    public Value getValue() {
+    public String getValue() {
         return value;
     }
 

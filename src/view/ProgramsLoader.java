@@ -7,14 +7,12 @@ import model.ProgramState;
 import model.expressions.*;
 import model.statements.*;
 import model.types.*;
-import model.values.BoolValue;
-import model.values.IntValue;
-import model.values.StringValue;
-import model.values.Value;
+import model.values.*;
 import repository.MemoryRepository;
 import repository.Repository;
 
 import java.io.*;
+import java.sql.Ref;
 import java.util.ArrayList;
 
 public class ProgramsLoader {
@@ -364,6 +362,39 @@ public class ProgramsLoader {
         ProgramState programState9 = new ProgramState(executionStack9, symbolsTable9, output9, fileTable9, heap9);
         Repository repo9 = new MemoryRepository(programState9, "out9.txt");
         Controller controller9 = new Controller(repo9);
+
+        // example 9 Fork
+        Statement ex10 = new CompoundStatement
+                (
+                        new VariableDeclarationStatement("v", new IntType()),
+                        new CompoundStatement(
+                                new VariableDeclarationStatement("a", new RefType(new IntType())),
+                                new CompoundStatement(
+                                        new AssignStatement("v", new ValueExpression(new IntValue(10))),
+                                        new CompoundStatement(
+                                                new NewStatement("a", new ValueExpression(new IntValue(22))),
+                                                new CompoundStatement(
+                                                        new ForkStatement(
+                                                                new CompoundStatement(
+                                                                        new WriteHeapStatement("a", new ValueExpression(new IntValue(30))),
+                                                                        new CompoundStatement(
+                                                                                new AssignStatement("v", new ValueExpression(new IntValue(32))),
+                                                                                new CompoundStatement(
+                                                                                        new PrintStatement(new VariableExpression("v")),
+                                                                                        new PrintStatement(new ReadHeapExpression(new VariableExpression("a")))
+                                                                                )
+                                                                        )
+                                                                )
+                                                        ),
+                                                        new CompoundStatement(
+                                                                new PrintStatement(new VariableExpression("v")),
+                                                                new PrintStatement(new ReadHeapExpression(new VariableExpression("a")))
+                                                        )
+                                                )
+                                        )
+                                )
+                        )
+                );
 
         //setting up the file for keping the thread Id order ----------
         PrintWriter threadOrderFile = null;

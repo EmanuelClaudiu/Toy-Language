@@ -284,3 +284,289 @@ File Table:
 Heap:
 
 --------------------
+Program Id:
+1
+Execution Stack:
+a=int;b=int;a=2+3*5;b=a+1;print(b)
+
+Symbols Table:
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+a=int
+b=int;a=2+3*5;b=a+1;print(b)
+
+Symbols Table:
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+a=int
+b=int;a=2+3*5;b=a+1;print(b)
+
+Symbols Table:
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+b=int;a=2+3*5;b=a+1;print(b)
+
+Symbols Table:
+a --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+b=int;a=2+3*5;b=a+1;print(b)
+
+Symbols Table:
+a --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+b=int
+a=2+3*5;b=a+1;print(b)
+
+Symbols Table:
+a --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+b=int
+a=2+3*5;b=a+1;print(b)
+
+Symbols Table:
+a --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+a=2+3*5;b=a+1;print(b)
+
+Symbols Table:
+a --> 0
+b --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+a=2+3*5;b=a+1;print(b)
+
+Symbols Table:
+a --> 0
+b --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+a=2+3*5
+b=a+1;print(b)
+
+Symbols Table:
+a --> 0
+b --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+a=2+3*5
+b=a+1;print(b)
+
+Symbols Table:
+a --> 0
+b --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+b=a+1;print(b)
+
+Symbols Table:
+a --> 17
+b --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+b=a+1;print(b)
+
+Symbols Table:
+a --> 17
+b --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+b=a+1
+print(b)
+
+Symbols Table:
+a --> 17
+b --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+b=a+1
+print(b)
+
+Symbols Table:
+a --> 17
+b --> 0
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+print(b)
+
+Symbols Table:
+a --> 17
+b --> 18
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+print(b)
+
+Symbols Table:
+a --> 17
+b --> 18
+
+Output:
+
+File Table:
+
+Heap:
+
+--------------------
+Program Id:
+1
+Execution Stack:
+
+Symbols Table:
+a --> 17
+b --> 18
+
+Output:
+18
+
+File Table:
+
+Heap:
+
+--------------------

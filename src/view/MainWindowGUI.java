@@ -32,7 +32,9 @@ public class MainWindowGUI extends Application {
     public HBox labelsLayout = new HBox();
     public Label runningProgramLabel;
     public Label numberOfPrgStatesLabel;
+    public TextField numberOfPrgStatesTextField;
     public Button oneStepButton;
+    public Button runAllStepButton;
     public HBox contentLayout = new HBox();
     public TableView<HeapEntry> heapTableView;
     public ListView<String> outListView;
@@ -78,21 +80,33 @@ public class MainWindowGUI extends Application {
 
         //1st HBox layout
         runningProgramLabel = new Label("Running program " + programToRun.toString() + "...");
-        numberOfPrgStatesLabel = new Label("Number of program states: 1");
+        numberOfPrgStatesLabel = new Label("Number of program states:");
+        numberOfPrgStatesTextField = new TextField("# of prg states");
         oneStepButton = new Button("One Step");
+        runAllStepButton = new Button("Run All Step");
         //setting up the oneStep action
         controller.executor = Executors.newFixedThreadPool(2);
         programStateList = controller.removeCompletedProgram(controller.repo.getProgramList());
         oneStepButton.setOnAction(e -> oneStep());
+        runAllStepButton.setOnAction(e -> {
+            try {
+                controller.allStep();
+                setAllViews();
+            } catch (MyException myException) {
+                myException.printStackTrace();
+            } catch (InterruptedException interruptedException) {
+                interruptedException.printStackTrace();
+            }
+        });
         labelsLayout.setPadding(new Insets(20, 20, 20, 20));
         labelsLayout.setSpacing(30);
-        labelsLayout.getChildren().addAll(runningProgramLabel, numberOfPrgStatesLabel, oneStepButton);
+        labelsLayout.getChildren().addAll(runningProgramLabel, numberOfPrgStatesLabel, numberOfPrgStatesTextField, oneStepButton, runAllStepButton);
 
         //2nd HBox layout
-        TableColumn<HeapEntry, Integer> heapIdColumn = new TableColumn<>("Id.");
+        TableColumn<HeapEntry, String> heapIdColumn = new TableColumn<>("Id.");
         heapIdColumn.setMinWidth(30);
-        heapIdColumn.setCellValueFactory(new PropertyValueFactory<HeapEntry, Integer>("id"));
-        TableColumn<HeapEntry, String> heapRefColumn = new TableColumn<>("Ref");
+        heapIdColumn.setCellValueFactory(new PropertyValueFactory<HeapEntry, String>("id"));
+        TableColumn<HeapEntry, String> heapRefColumn = new TableColumn<>("Ref"); //Value
         heapRefColumn.setMinWidth(30);
         heapRefColumn.setCellValueFactory(new PropertyValueFactory<>("ref"));
         heapTableView = new TableView<>();
@@ -117,7 +131,7 @@ public class MainWindowGUI extends Application {
         TableColumn<SymTableEntry, String> symTableIdColumn = new TableColumn<>("Id.");
         symTableIdColumn.setMinWidth(20);
         symTableIdColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
-        TableColumn<SymTableEntry, Value> symTableValueColumn = new TableColumn<>("Value");
+        TableColumn<SymTableEntry, String> symTableValueColumn = new TableColumn<>("Value"); //String
         symTableValueColumn.setMinWidth(20);
         symTableValueColumn.setCellValueFactory(new PropertyValueFactory<>("value"));
         symTblTableView = new TableView<>();
@@ -167,7 +181,7 @@ public class MainWindowGUI extends Application {
     public ObservableList<HeapEntry> getHeapEntries(Heap _heap){
         ObservableList<HeapEntry> entries = FXCollections.observableArrayList();
         for (Object id : _heap.getContent().keySet()){
-            entries.add(new HeapEntry((Integer) id, (_heap.getContent().get((id))).toString() ));
+            entries.add(new HeapEntry(id.toString(), (_heap.getContent().get((id))).toString() ));
         }
         return entries;
     }
@@ -175,19 +189,19 @@ public class MainWindowGUI extends Application {
     public ObservableList<SymTableEntry> getSymTableEntries(DictionaryInterface _symTbl){
         ObservableList<SymTableEntry> entries = FXCollections.observableArrayList();
         for (Object id : _symTbl.getContent().keySet()){
-            entries.add(new SymTableEntry((String) id, (Value) _symTbl.getContent().get((id))));
+            entries.add(new SymTableEntry(id.toString(), _symTbl.getContent().get((id)).toString()));
         }
         return entries;
     }
 
     //SETTERS
 
-    public void setNumberOfPrgStatesLabel(){
-        numberOfPrgStatesLabel.setText("Number of program states: " + ((Integer) (controller.repo.getProgramList().size())).toString());
+    public void setNumberOfPrgStatesTextField(){
+        numberOfPrgStatesTextField.setText(((Integer) (controller.repo.getProgramList().size())).toString());
     }
 
     public void setAllViews(){
-        setNumberOfPrgStatesLabel();
+        setNumberOfPrgStatesTextField();
         setHeapTableView();
         setOutListView();
         setFileTableListView();
@@ -202,6 +216,7 @@ public class MainWindowGUI extends Application {
     }
 
     public void setOutListView(){
+        outListView.getItems().clear();
         if(controller.repo.getProgramList().size() != 0) { //if program still running
             for (Object entry : controller.repo.getCurrentProgramState().output.getContent()) {
                 outListView.getItems().add(entry.toString());
@@ -210,6 +225,7 @@ public class MainWindowGUI extends Application {
     }
 
     public void setFileTableListView(){
+        fileTableListView.getItems().clear();
         if(controller.repo.getProgramList().size() != 0) { //if program still running
             HashMap<StringValue, BufferedReader> fileTable = controller.repo.getCurrentProgramState().fileTable.getContent();
             for (Object entry : fileTable.keySet()) {
